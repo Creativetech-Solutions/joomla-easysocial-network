@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.0" client="site" method="upgrade">
+
+	<name>Dowalo UsersLogin</name>
+
+	<author>Hardik mistry</author>
+
+	<creationDate>July 2011</creationDate>
+
+	<copyright>Copyright (C) 2009 - 2010 Open Source Matters. All rights reserved.</copyright>
+
+	<license>GNU/GPL</license>
+
+	<authorEmail>emailtohardik@gmail.com</authorEmail>
+
+	<authorUrl>www.joomlaextensions.co.in</authorUrl>
+
+	<version>1.0</version>
+
+	<description>Dowalo UsersLogin</description>
+
+	<files>
+		<filename module="mod_jelogin">mod_jelogin.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>	 
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>img_popup</folder>
+		<folder>helper</folder>
+		<folder>css</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB.mod_jelogin.ini</language>	
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config> 
+</extension>
+

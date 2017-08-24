@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>MOD_CROWDFUNDINGFILTERS</name>
+	<author>Todor Iliev</author>
+	<copyright>Copyright (C) 2015 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.en.html</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>2.1</version>
+	<creationDate>13 November, 2015</creationDate>
+	<description><![CDATA[
+    <p>Crowdfunding Filters is a module that adds filters on the discover page.</p>
+    <p><a href='http://itprism.com/' target='_blank'>Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+    <p>Please, <a href='http://extensions.joomla.org/extensions/extension/e-commerce/donations/crowdfunding' target='_blank'>vote for the extension</a> on Joomla! Extensions Directory</p>
+    ]]></description>
+	
+    <help url="MOD_CROWDFUNDINGFILTERS_HELP_URL"/>
+
+	<files>
+	    <filename module="mod_crowdfundingfilters">mod_crowdfundingfilters.php</filename>
+	    <filename>helper.php</filename>
+
+        <folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                    
+                <field name="display_countries" type="radio" class="btn-group"
+                    label="MOD_CROWDFUNDINGFILTERS_DISPLAY_COUNTRIES"
+                    description="MOD_CROWDFUNDINGFILTERS_DISPLAY_COUNTRIES_DESC"
+                    default="1">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+                <field name="display_categories" type="radio" class="btn-group"
+                    label="MOD_CROWDFUNDINGFILTERS_DISPLAY_CATEGORIES"
+                    description="MOD_CROWDFUNDINGFILTERS_DISPLAY_CATEGORIES_DESC"
+                    default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+                <field name="display_funding_type" type="radio" class="btn-group"
+                    label="MOD_CROWDFUNDINGFILTERS_DISPLAY_FUNDING_TYPE"
+                    description="MOD_CROWDFUNDINGFILTERS_DISPLAY_FUNDING_TYPE_DESC"
+                    default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+                <field name="display_project_type" type="radio" class="btn-group"
+                    label="MOD_CROWDFUNDINGFILTERS_DISPLAY_PROJECT_TYPE"
+                    description="MOD_CROWDFUNDINGFILTERS_DISPLAY_PROJECT_TYPE_DESC"
+                    default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+			</fieldset>
+
+            <fieldset name="predefined" label="MOD_CROWDFUNDINGFILTERS_PREDEFINED_FILTERS">
+                <field name="enable_predefined" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_ENABLE_PREDEFINED"
+                       description="MOD_CROWDFUNDINGFILTERS_ENABLE_PREDEFINED_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="display_started_soon" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_NEW_PROJECTS"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_NEW_PROJECTS_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_ending_soon" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_ENDING_SOON"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_ENDING_SOON_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_featured" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_RECOMMENDED"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_RECOMMENDED_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_successfully_completed" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_SUCCESS_STORIES"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_SUCCESS_STORIES_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+            </fieldset>
+            
+            <fieldset name="sorting" label="MOD_CROWDFUNDINGFILTERS_SORTING_FILTERS">
+                <field name="enable_sorting" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_ENABLE_SORTING"
+                       description="MOD_CROWDFUNDINGFILTERS_ENABLE_SORTING_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_alphabet" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_ALPHABET"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_ALPHABET_DESC"
+                       default="1">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_date" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_DATE"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_DATE_DESC"
+                       default="1">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_popularity" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_POPULARITY"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_POPULARITY_DESC"
+                       default="1">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="display_funding" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_FUNDING"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_FUNDING_DESC"
+                       default="1">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <!--<field name="display_fans" type="radio" class="btn-group"
+                       label="MOD_CROWDFUNDINGFILTERS_DISPLAY_FANS"
+                       description="MOD_CROWDFUNDINGFILTERS_DISPLAY_FANS_DESC"
+                       default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>-->
+            </fieldset>
+			
+			<fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                    
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                
+                <field name="cachemode" type="hidden" default="static">
+                    <option value="static"></option>
+                </field>
+                
+                <field name="enable_chosen" type="radio" class="btn-group"
+                    label="MOD_CROWDFUNDINGFILTERS_ENABLE_CHOSEN"
+                    description="MOD_CROWDFUNDINGFILTERS_ENABLE_CHOSEN_DESC"
+                    default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+            </fieldset>
+            
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+	<name>plg_system_rstemplate</name>
+	<author>RSJoomla!</author>
+	<creationDate>March 2014</creationDate>
+	<copyright>(C) 2014 www.rsjoomla.com</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_SYSTEM_RSTEMPLATE_XML_DESCRIPTION</description>
+	<scriptfile>script.rstemplate.php</scriptfile>
+	<files>
+		<filename plugin="rstemplate">rstemplate.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_rstemplate.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_rstemplate.sys.ini</language>
+	</languages>
+</extension>

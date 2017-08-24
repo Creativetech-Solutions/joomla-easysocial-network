@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>JF Mobile Menu</name>
+	<author>JoomForest.com</author>
+	<creationDate>05.05.16</creationDate>
+	<copyright>Copyright (C) 2011-2016 JoomForest.com, All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@joomforest.com</authorEmail>
+	<authorUrl>http://www.joomforest.com/</authorUrl>
+	<version>1.2</version>
+	<description><![CDATA[JoomForest.com - JF Mobile Menu v1.2 (Module for Joomla!).<style type='text/css'>.spacer{display:block;width:600px;height:20px;background:#ddd}.jf_size_width_medium{width:70%}</style>]]></description>
+	<files>
+		<filename module="mod_jf_mobilemenu">mod_jf_mobilemenu.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jf_mobilemenu.xml</filename>
+		<filename>helper.php</filename>
+		<filename>LICENSE.txt</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jf_mobilemenu.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="menutype" type="menu" label="MOD_JF_MM_FIELD_MENUTYPE_LABEL" description="MOD_JF_MM_FIELD_MENUTYPE_DESC" />
+				<field name="base" type="menuitem" label="MOD_JF_MM_FIELD_ACTIVE_LABEL" description="MOD_JF_MM_FIELD_ACTIVE_DESC" >
+					<option value="">JCURRENT</option>
+				</field>
+				<field name="startLevel" type="list" default="1" label="MOD_JF_MM_FIELD_STARTLEVEL_LABEL" description="MOD_JF_MM_FIELD_STARTLEVEL_DESC" >
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+				<field name="endLevel" type="list" default="0" label="MOD_JF_MM_FIELD_ENDLEVEL_LABEL" description="MOD_JF_MM_FIELD_ENDLEVEL_DESC" >
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+				<field name="showAllChildren" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_JF_MM_FIELD_ALLCHILDREN_LABEL" description="MOD_JF_MM_FIELD_ALLCHILDREN_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_fa" 			type="radio" 	default="0" 					label="MOD_JF_MM_FIELD_FA_LABEL" 					description="MOD_JF_MM_FIELD_FA_DESC" class="btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="jf_fa_Sheet"		type="text" 	default="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"  label="Font-Awesome Stylesheet CDN" 	description="Type Stylesheet URL which you want to attach. (NOTE! - Make sure you have enabled 'Font-Awesome' option above)" class="jf_size_width_medium"/>
+				
+				<field name="jf_mm_device" 		type="list" 	default="4" 					label="MOD_JF_MM_FIELD_DEVICE_LABEL" 				description="MOD_JF_MM_FIELD_DEVICE_DESC" >
+					<option value="1">MOD_JF_MM_FIELD_DEVICE_OPT_1</option>
+					<option value="2">MOD_JF_MM_FIELD_DEVICE_OPT_2</option>
+					<option value="3">MOD_JF_MM_FIELD_DEVICE_OPT_3</option>
+					<option value="4">MOD_JF_MM_FIELD_DEVICE_OPT_4</option>
+					<option value="5">MOD_JF_MM_FIELD_DEVICE_OPT_5</option>
+				</field>
+				<field name="jf_mm_direction" 	type="list" 	default="0" 					label="MOD_JF_MM_FIELD_DIRECTION_LABEL" 			description="MOD_JF_MM_FIELD_DIRECTION_DESC" >
+					<option value="0">MOD_JF_MM_FIELD_DIRECTION_OPT_LEFT</option>
+					<option value="1">MOD_JF_MM_FIELD_DIRECTION_OPT_RIGHT</option>
+				</field>
+				<field name="jf_mm_title" 		type="text" 	default="JF Mobile Menu" 		label="MOD_JF_MM_FIELD_MENU_TITLE_LABEL" 			description="MOD_JF_MM_FIELD_MENU_TITLE_DESC" />
+				<field name="jf_mm_btn" 		type="text"		default="fa-bars" 				label="MOD_JF_MM_FIELD_MENU_BUTTON_LABEL" 			description="MOD_JF_MM_FIELD_MENU_BUTTON_DESC" />
+				<field name="jf_mm_close" 		type="text" 	default="fa-times" 				label="MOD_JF_MM_FIELD_MENU_CLOSE_LABEL" 			description="MOD_JF_MM_FIELD_MENU_CLOSE_DESC" />
+				<field name="jf_mm_back_txt"	type="text" 	default="Back" 					label="MOD_JF_MM_FIELD_MENU_BACK_BUTTON_TEXT" 		description="MOD_JF_MM_FIELD_MENU_BACK_BUTTON_TEXT_DESC" />
+				<field name="jf_mm_back_pos" 	type="list" 	default="0" 					label="MOD_JF_MM_FIELD_MENU_BACK_BUTTON_POSITION" 	description="MOD_JF_MM_FIELD_MENU_BACK_BUTTON_POSITION_DESC" >
+					<option value="0">MOD_JF_MM_FIELD_MENU_BACK_BUTTON_POSITION_TOP</option>
+					<option value="1">MOD_JF_MM_FIELD_MENU_BACK_BUTTON_POSITION_BOTTOM</option>
+				</field>
+				<field name="jf_mm_styles" 		type="textarea" default="" 						label="MOD_JF_MM_FIELD_STYLES_LABEL" 				description="MOD_JF_MM_FIELD_STYLES_DESC" filter="raw" />
+				
+				<field type="spacer" class="daamn" hr="true" />
+				<field name="jf_mm_color_1" type="color" default="#4A5052" label="MOD_JF_MM_FIELD_COLOR_1_LABEL" description="MOD_JF_MM_FIELD_COLOR_1_DESC" />
+				<field name="jf_mm_color_2" type="color" default="#F5F5F5" label="MOD_JF_MM_FIELD_COLOR_2_LABEL" description="MOD_JF_MM_FIELD_COLOR_2_DESC" />
+				<field name="jf_mm_color_3" type="color" default="#4A5052" label="MOD_JF_MM_FIELD_COLOR_3_LABEL" description="MOD_JF_MM_FIELD_COLOR_3_DESC" />
+				<field name="jf_mm_color_4" type="color" default="#4A5052" label="MOD_JF_MM_FIELD_COLOR_4_LABEL" description="MOD_JF_MM_FIELD_COLOR_4_DESC" />
+				<field name="jf_mm_color_5" type="color" default="#434749" label="MOD_JF_MM_FIELD_COLOR_5_LABEL" description="MOD_JF_MM_FIELD_COLOR_5_DESC" />
+				<field name="jf_mm_color_6" type="color" default="#444444" label="MOD_JF_MM_FIELD_COLOR_6_LABEL" description="MOD_JF_MM_FIELD_COLOR_6_DESC" />
+				<field name="jf_mm_color_7" type="color" default="#333333" label="MOD_JF_MM_FIELD_COLOR_7_LABEL" description="MOD_JF_MM_FIELD_COLOR_7_DESC" />
+				<field name="jf_mm_color_8" type="color" default="#5A5E5F" label="MOD_JF_MM_FIELD_COLOR_8_LABEL" description="MOD_JF_MM_FIELD_COLOR_8_DESC" />
+				<field name="jf_mm_color_9" type="color" default="#888888" label="MOD_JF_MM_FIELD_COLOR_9_LABEL" description="MOD_JF_MM_FIELD_COLOR_9_DESC" />
+				<field name="jf_mm_color_10" type="color" default="#eeeeee" label="MOD_JF_MM_FIELD_COLOR_10_LABEL" description="MOD_JF_MM_FIELD_COLOR_10_DESC" />
+				<field name="jf_mm_color_11" type="color" default="#202020" label="MOD_JF_MM_FIELD_COLOR_11_LABEL" description="MOD_JF_MM_FIELD_COLOR_11_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_1_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_1_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_1_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_1_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_1_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_2_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_2_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_2_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_2_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_2_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_3_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_3_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_3_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_3_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_3_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_4_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_4_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_4_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_4_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_4_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_5_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_5_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_5_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_5_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_5_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_6_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_6_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_6_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_6_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_6_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_7_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_7_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_7_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_7_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_7_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_8_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_8_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_8_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_8_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_8_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_9_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_9_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_9_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_9_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_9_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_10_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_10_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_10_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_10_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_10_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_11_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_11_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_11_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_11_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_11_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_12_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_12_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_12_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_12_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_12_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_13_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_13_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_13_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_13_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_13_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_14_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_14_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_14_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_14_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_14_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_15_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_15_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_15_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_15_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_15_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_16_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_16_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_16_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_16_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_16_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_17_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_17_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_17_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_17_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_17_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_18_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_18_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_18_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_18_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_18_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_19_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_19_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_19_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_19_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_19_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="jf_mm_i_20_ID" type="menuitem" default="" label="MOD_JF_MM_FIELD_MENU_ID_20_LABEL" description="MOD_JF_MM_FIELD_MENU_ID_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="jf_mm_i_20_Icon" type="text" default="" label="MOD_JF_MM_FIELD_MENU_ICON_LABEL" description="MOD_JF_MM_FIELD_MENU_ICON_DESC" />
+				<field name="jf_mm_i_20_Img" type="media" size="20" label="MOD_JF_MM_FIELD_MENU_IMAGE_LABEL" description="MOD_JF_MM_FIELD_MENU_IMAGE_DESC"/>
+				<field name="jf_mm_i_20_Style" type="text" default="" label="MOD_JF_MM_FIELD_MENU_STYLE_LABEL" description="MOD_JF_MM_FIELD_MENU_STYLE_DESC" />
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

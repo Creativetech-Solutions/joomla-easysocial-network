@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="installer" method="upgrade">
+	<name>plg_installer_rsbrixton</name>
+	<creationDate>July 2015</creationDate>
+	<author>RSJoomla!</author>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>https://www.rsjoomla.com</authorUrl>
+	<copyright>(c) 2015 www.rsjoomla.com</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+	<version>1.0.0</version>
+	<description>PLG_INSTALLER_RSBRIXTON_XML_DESCRIPTION</description>
+	<scriptfile>script.rsbrixton.php</scriptfile>
+	<files>
+		<filename plugin="rsbrixton">rsbrixton.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_installer_rsbrixton.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_installer_rsbrixton.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="code" type="text" class="input-large" maxsize="20" label="PLG_INSTALLER_RSBRIXTON_CODE" description="PLG_INSTALLER_RSBRIXTON_CODE_DESCRIPTION" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

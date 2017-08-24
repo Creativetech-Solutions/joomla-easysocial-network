@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>JF SlidesJS</name>
+	<author>JoomForest.com</author>
+	<creationDate>09.12.14</creationDate>
+	<copyright>Copyright (C) 2011-2014 JoomForest. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@joomforest.com</authorEmail>
+	<authorUrl>http://www.joomforest.com/</authorUrl>
+	<version>1.0</version>
+	<description>JoomForest.com - JF SlidesJS v1.0 (Joomla 2.5/3.2 Module). It is based on beautiful Responsive "SlidesJS" (http://www.slidesjs.com/).</description>
+	<files>
+		<filename module="mod_jf_slidesjs">mod_jf_slidesjs.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jf_slidesjs.xml</filename>
+		<filename>LICENSE.txt</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jf_slidesjs.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="JF slidesjs" class="jf_special jf_slidesjs">
+				<field name="jf_slidesjs_ID" type="text" default="jf_slidesjs_1" label="Special ID" description="Type Module Special ID" />
+				<field name="jf_slidesjs_Imgs_W" type="text" default="1180" label="Images Width" description="Type images width in pixels" />
+				<field name="jf_slidesjs_Imgs_H" type="text" default="467" label="Images Height" description="Type images height in pixels" />
+				<field name="jf_slidesjs_Effect" type="list" default="slide" label="Effect" description="Choose which effect you want">
+					<option value="slide">Slide</option>
+					<option value="fade">fade</option>
+				</field>
+				<field name="jf_slidesjs_Effect_S_S" type="text" default="1000" label="Slide Effect Speed" description="Slide effect speed in milliseconds(default is '1000')." />
+				<field name="jf_slidesjs_Effect_F_S" type="text" default="500" label="Fade Effect Speed" description="Type Fade effect speed in milliseconds (default is '500')." />
+				<field name="jf_slidesjs_Interval" type="text" default="7000" label="Interval Time" description="Type Interval time in milliseconds (default is '7000' = 7 seconds)." />
+				<field name="jf_slidesjs_Auto" type="list" default="true" label="Auto Animate" description="Choose Enable or to Disable Auto Animation.">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				<field name="jf_slidesjs_Pause" type="list" default="true" label="Pause on Hover" description="Choose Enable or to Disable Pause on hover.">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				<field name="jf_slidesjs_CaptionAnim" type="list" default="marginBottom" label="Caption Animation Direction" description="Choose caption animation direction">
+					<option value="marginBottom">Margin Bottom</option>
+					<option value="marginTop">Margin Top</option>
+					<option value="marginLeft">Margin Left</option>
+					<option value="marginRight">Margin Right</option>
+				</field>
+				<field name="jf_slidesjs_CaptionDistance" type="text" default="-75" label="Caption Distance" description="Type Caption Distance, from what distance it will animate while showing (default is '-75' = -75 pixels)." />
+				<field name="jf_slidesjs_Caption_S" type="text" default="500" label="Caption Animation Speed" description="Type Caption Animation speed in milliseconds (default is '500')." />
+				<field name="jf_slidesjs_Nav" type="list" default="true" label="Navigation Arrows" description="Choose Enable/Disable Navigation Arrows">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				<field name="jf_slidesjs_Nav_State" type="list" default="0" label="Navigation Arrows Statement" description="Choose on which statement you want to have Navigation Arrows">
+					<option value="0">Shown</option>
+					<option value="1">Hover-Show</option>
+				</field>
+				<field name="jf_slidesjs_Pag" type="list" default="true" label="Pagination Buttons" description="Choose Enable/Disable Pagination Buttons">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				
+				
+				<field name="jf_slidesjs_styles" type="textarea" class="jf_size_width_medium" default="" label="Custom CSS Styles" description="You can add your own custom CSS styles" filter="raw" />
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_1" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #1" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_1_link" type="text" default="" size="20" label="Slide #1 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_1_link_target" type="list" default="_self" label="Slide #1 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_1_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #1 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_1_captionPos" type="text" default="" size="20" label="Slide #1 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_2" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #2" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_2_link" type="text" default="" size="20" label="Slide #2 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_2_link_target" type="list" default="_self" label="Slide #2 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_2_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #2 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_2_captionPos" type="text" default="" size="20" label="Slide #2 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_3" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #3" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_3_link" type="text" default="" size="20" label="Slide #3 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_3_link_target" type="list" default="_self" label="Slide #3 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_3_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #3 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_3_captionPos" type="text" default="" size="20" label="Slide #3 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_4" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #4" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_4_link" type="text" default="" size="20" label="Slide #4 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_4_link_target" type="list" default="_self" label="Slide #4 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_4_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #4 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_4_captionPos" type="text" default="" size="20" label="Slide #4 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_5" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #5" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_5_link" type="text" default="" size="20" label="Slide #5 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_5_link_target" type="list" default="_self" label="Slide #5 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_5_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #5 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_5_captionPos" type="text" default="" size="20" label="Slide #5 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_6" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #6" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_6_link" type="text" default="" size="20" label="Slide #6 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_6_link_target" type="list" default="_self" label="Slide #6 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_6_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #6 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_6_captionPos" type="text" default="" size="20" label="Slide #6 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_7" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #7" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_7_link" type="text" default="" size="20" label="Slide #7 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_7_link_target" type="list" default="_self" label="Slide #7 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_7_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #7 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_7_captionPos" type="text" default="" size="20" label="Slide #7 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_8" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #8" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_8_link" type="text" default="" size="20" label="Slide #8 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_8_link_target" type="list" default="_self" label="Slide #8 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_8_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #8 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_8_captionPos" type="text" default="" size="20" label="Slide #8 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_9" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #9" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_9_link" type="text" default="" size="20" label="Slide #9 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_9_link_target" type="list" default="_self" label="Slide #9 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_9_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #9 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_9_captionPos" type="text" default="" size="20" label="Slide #9 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+				<field type="spacer" hr="true" />
+				
+					<field name="jf_slidesjs_slide_10" type="media" size="20" directory="jf/modules/jf_slidesjs" label="Slide #10" description="Choose Image."/>
+					<field name="jf_slidesjs_slide_10_link" type="text" default="" size="20" label="Slide #10 /Link" description="Type Link (for example: https://www.google.com/). (Leave empty if you dont want to use link)"/>
+					<field name="jf_slidesjs_slide_10_link_target" type="list" default="_self" label="Slide #10 / Link Target" description="Choose Link Target">
+						<option value="_self">Self</option>
+						<option value="_blank">Blank</option>
+					</field>
+					<field name="jf_slidesjs_slide_10_caption" type="textarea" class="jf_size_width_medium" default="" label="Slide #10 / Caption" description="You can type here caption text. Leave it Empty if you dont want to use it" filter="raw" />
+					<field name="jf_slidesjs_slide_10_captionPos" type="text" default="" size="20" label="Slide #10 / Caption Position" description="Type here Caption CSS Position (default is - 'left:30px;bottom:50px'"/>
+				
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

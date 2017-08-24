@@ -1,0 +1,9 @@
+/**
+ * JF SlidesJS
+ * @author    JoomForest.com
+ * @email   support@joomforest.com
+ * @website   http://www.joomforest.com
+ * @copyright Copyright (C) 2011-2014 JoomForest. All rights reserved.
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+#jf_slidesjs.loaded{background:url(jf_loader_1.gif) no-repeat center}.jf_slidesjs{display:none;position:relative}.jf_slidesjs .slidesjs-navigation{margin-top:5px}.jf_slidesjs .slide img{width:100%}.jf_slidesjs .slide a{display:inline-block}.jf_slidesjs .slidesjs-next,.jf_slidesjs .slidesjs-previous{background-repeat:no-repeat;display:block;width:30px;height:59px;overflow:hidden;text-indent:-9999px;float:left;margin-right:5px;top:42%;z-index:99;position:absolute;margin:0 10px;opacity:.5;filter:alpha(opacity=50);-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease;}.jf_slidesjs .slidesjs-next:hover,.jf_slidesjs .slidesjs-previous:hover{opacity:1;filter:alpha(opacity=100)}.jf_slidesjs .slidesjs-next{background-image:url(jf_next.png);right:0}.jf_slidesjs .slidesjs-previous{background-image:url(jf_prev.png);left:0}.jf_slidesjs .slidesjs-pagination{margin:0;padding:0;list-style:none;position:absolute;bottom:10px;z-index:99;width:100%;text-align:center}.jf_slidesjs .slidesjs-pagination li{display:inline-block;margin:0 2px}.jf_slidesjs .slidesjs-pagination li a{display:block;width:13px;height:0;padding-top:13px;background:rgba(0,0,0,0.2);float:left;overflow:hidden;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.jf_slidesjs .slidesjs-pagination li a.active,.jf_slidesjs .slidesjs-pagination li a:hover.active{background:#fff}.jf_slidesjs .caption{z-index:500;display:block !important;position:absolute;bottom:0;left:0;padding:5px 20px 0 20px;background:#000;background:rgba(0,0,0,.5);font-size:1.3em;line-height:1.33;color:#fff;text-shadow:none;padding:10px 20px}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade" client="site">
+	<name>MOD_ATSCREDITS</name>
+	<author>Nicholas K. Dionysopoulos</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>Copyright (C) 2011-2016 Nicholas K. Dionysopoulos / AkeebaBackup.com</copyright>
+	<license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>nicholas@akeebabackup.com</authorEmail>
+	<authorUrl>www.akeebabackup.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_ATSCREDITS_DESCRIPTION</description>
+	<files>
+		<folder>tmpl</folder>
+
+		<file module="mod_atscredits">mod_atscredits.php</file>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_atscredits.ini</language>
+		<!-- Normally I should not have to do this... -->
+		<language tag="en-GB">en-GB/en-GB.mod_atscredits.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="showCredits"
+						type="list"
+						default="1"
+						label="MOD_ATSCREDITS_OPT_SHOWCREDITS_LABEL"
+						description="MOD_ATSCREDITS_OPT_SHOWCREDITS_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+						name="showTime"
+						type="list"
+						default="0"
+						label="MOD_ATSCREDITS_OPT_SHOWTIME_LABEL"
+						description="MOD_ATSCREDITS_OPT_SHOWTIME_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+						name="layout"
+						type="modulelayout"
+						label="JFIELD_ALT_LAYOUT_LABEL"
+						description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+						name="moduleclass_sfx"
+						type="textarea"
+						rows="3"
+						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+						name="cache"
+						type="list"
+						default="1"
+						label="COM_MODULES_FIELD_CACHING_LABEL"
+						description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+						name="cache_time"
+						type="text"
+						default="900"
+						label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+						description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+						name="cachemode"
+						type="hidden"
+						default="static">
+					<option
+							value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>JE communitysociallink</name>
+	<author>Hardik mistry</author>
+	<creationDate>April 2010</creationDate>
+	<copyright>Copyright (C) 2009 - 2010 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.joomlaextensions.co.in</license>
+	<authorEmail>emailtohardik@gmail.com</authorEmail>
+	<authorUrl>www.joomlaextensions.co.in</authorUrl>
+	<version>1.0</version>
+	<description> JE communitysociallink</description>
+	<files>
+		<filename module="mod_communitysociallinks">mod_communitysociallinks.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>	  
+		<folder>tmpl</folder>
+	
+
+		
+	</files>
+		
+	<config>
+		<fields name="params">
+			<fieldset name="basic" >
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

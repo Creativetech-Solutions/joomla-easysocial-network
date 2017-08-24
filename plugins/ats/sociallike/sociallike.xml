@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="ats" method="upgrade">
+	<name>PLG_ATS_SOCIALLIKE_NAME</name>
+	<author>Nicholas K. Dionysopoulos</author>
+	<authorEmail>nicholas@dionysopoulos.me</authorEmail>
+	<authorUrl>http://www.akeebabackup.com</authorUrl>
+	<copyright>Copyright (c)2011-2016 Nicholas K. Dionysopoulos</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<creationDate>2013-11-26</creationDate>
+	<version>1.0</version>
+	<description>PLG_ATS_SOCIALLIKE_DESCRIPTION</description>
+	
+	<files>
+		<filename plugin="sociallike">sociallike.php</filename>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_ats_sociallike.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_ats_sociallike.sys.ini</language>
+	</languages>
+
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="button_facebook" type="radio" label="PLG_ATS_SOCIALLIKE_FACEBOOK_BTN" default="1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        
+        <field name="button_twitter" type="radio" label="PLG_ATS_SOCIALLIKE_TWITTER_BTN" default="1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        
+        <field name="button_gplus" type="radio" label="PLG_ATS_SOCIALLIKE_GPLUS_BTN" default="1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        
+        <field name="button_linkedin" type="radio" label="PLG_ATS_SOCIALLIKE_LINKEDIN_BTN" default="1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        
+        <field name="button_stumbleupon" type="radio" label="PLG_ATS_SOCIALLIKE_STUMBLEUPON_BTN" default="1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        
+        <field name="button_pinterest" type="radio" label="PLG_ATS_SOCIALLIKE_PINTEREST_BTN" default="1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        
+        <field name="button_addthis" type="radio" label="PLG_ATS_SOCIALLIKE_ADDTHIS_BTN" default="1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        
+        
+      </fieldset>
+    </fields>
+  </config>
+</extension>

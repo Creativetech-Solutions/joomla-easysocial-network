@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>JE communitysearch</name>
+	<author>Hardik mistry</author>
+	<creationDate>April 2010</creationDate>
+	<copyright>Copyright (C) 2009 - 2010 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.joomlaextensions.co.in</license>
+	<authorEmail>emailtohardik@gmail.com</authorEmail>
+	<authorUrl>www.joomlaextensions.co.in</authorUrl>
+	<version>1.0</version>
+	<description> JE communitysearch</description>
+	<files>
+		<filename module="mod_communitysearch">mod_communitysearch.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>	  
+		<filename>ajaxsearch.php</filename>	  
+		<folder>tmpl</folder>
+		<folder>js</folder>
+	</files>
+		
+	<config>
+		<fields name="params">
+			<fieldset name="basic" >
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
