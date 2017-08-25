@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <extension type="component" version="3.5" method="upgrade">
+
+	<name>Joom Project</name>
+
+	<creationDate>06/05/2016</creationDate>
+
+	<author>Hardik Mistry</author>
+
+	<authorEmail>emailtohardik@gmail.com</authorEmail>
+
+	<authorUrl>www.joomlaextensions.co.in</authorUrl>
+
+	<copyright>Copyright (C) 2009 - 2011 Open Source Matters. All rights reserved.</copyright>
+
+	<license>GNU/GPL</license>
+
+	<version>1.0</version>
+
+	<description>Jom Project</description>
+	
+	 <installfile>install.joomproject.php</installfile>
+
+	<uninstallfile>uninstall.joomproject.php</uninstallfile>
+
+    <scriptfile>script.joomproject.php</scriptfile>
+
+	<!-- SQL queries -->
+
+	  <install>
+
+        <sql>
+            <file driver="mysqli" charset="utf8">install.mysql.utf8.sql</file>
+            <file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+        </sql>
+
+    </install>
+
+    <uninstall>
+
+        <sql>
+
+            <file driver="mysqli" charset="utf8">uninstall.mysql.utf8.sql</file>
+
+            <file driver="mysql" charset="utf8">uninstall.mysql.utf8.sql</file>
+
+        </sql>
+
+    </uninstall> 
+
+	<files folder="components/com_joomproject">
+		
+		<filename>index.html</filename>	
+		<filename>joomproject.php</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>	
+		<folder>helper</folder>
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	
+	</files>
+
+	<languages folder="language/en-GB">
+			<language tag="en-GB">en-GB.com_joomproject.ini</language>
+	</languages> 
+ 
+ 
+ 
+<administration>
+
+		 
+		<menu  task="category">Joom Project</menu>
+	 <submenu>
+	  <menu  link="option=com_joomproject&amp;view=category">Category</menu>
+	  
+	 </submenu>
+		
+		<files folder="administrator/components/com_joomproject"> 
+			<filename>controller.php</filename>	
+			<filename>index.html</filename>
+			<filename>joomproject.php</filename>
+			<filename>install.mysql.utf8.sql</filename>
+			<filename>uninstall.mysql.utf8.sql</filename>
+		 	<folder>controllers</folder>
+			<folder>helper</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		 	 
+		</files>
+	
+	<languages folder="administrator/language/en-GB">
+			<language tag="en-GB">en-GB.com_joomproject.ini</language>
+	</languages> 
+
+ 
+	</administration>
+ 
+	
+
+</extension>

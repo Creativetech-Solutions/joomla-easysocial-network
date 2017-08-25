@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  @package ats
+  @copyright Copyright (c)2011-2016 Nicholas K. Dionysopoulos / AkeebaBackup.com
+  @license GNU GPL v3 or later
+-->
+<form
+  type="browse"
+  show_header="1"
+  show_filters="1"
+  show_pagination="1"
+  norows_placeholder="COM_ATS_COMMON_NORECORDS"
+  >
+  <headerset>
+    <header name="ats_bucket_id" type="RowSelect" tdwidth="20px" />
+
+    <header name="ats_bucket_id" type="Field" tdwidth="20px" label="#" id="num" />
+
+    <header name="title" type="Searchable" sortable="true" />
+
+    <header name="status" label="COM_ATS_BUCKETS_HEADING_STATUS" type="Selectable" sortable="true" tdwidth="10%"
+            source_class="Akeeba\TicketSystem\Admin\Helper\Select" source_method="getTicketStatus"
+            source_key="value"
+            source_value="text"
+      />
+
+    <header name="enabled" type="Published" sortable="true" tdwidth="8%" />
+
+    <header name="created_on" label="COM_ATS_BUCKETS_HEADING_CREATED" type="Text" sortable="true" tdwidth="10%"/>
+
+    <header name="modified_on" label="COM_ATS_BUCKETS_HEADING_MODIFIED" type="Text" sortable="true" tdwidth="10%"/>
+  </headerset>
+
+  <fieldset name="items">
+    <field name="ats_bucket_id" type="SelectRow"/>
+
+    <field name="ats_bucket_id" type="Text" id="num" />
+
+    <field name="title" type="Text"
+           show_link="true"
+           url="index.php?option=com_ats&amp;view=Buckets&amp;task=edit&amp;id=[ITEM:ID]"
+      />
+
+    <field name="status" type="GenericList"
+           source_class="Akeeba\TicketSystem\Admin\Helper\Select" source_method="getTicketStatus"
+           source_key="value"
+           source_value="text" />
+
+    <field name="enabled" type="Published"/>
+
+    <field name="created_on" type="Calendar" />
+
+    <field name="modified_on" type="Calendar" />
+  </fieldset>
+</form>

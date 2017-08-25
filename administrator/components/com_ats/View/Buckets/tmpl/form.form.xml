@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  @package ats
+  @copyright Copyright (c)2011-2016 Nicholas K. Dionysopoulos / AkeebaBackup.com
+  @license GNU GPL v3 or later
+-->
+<form>
+
+    <fieldset name="basic">
+        <field
+            name="title"
+            type="Text"
+            label="COM_ATS_BUCKETS_HEADING_TITLE"
+            required="true"
+            />
+
+        <field name="status"
+               type="GenericList"
+               label="COM_ATS_BUCKETS_HEADING_STATUS"
+               source_class="Akeeba\TicketSystem\Admin\Helper\Select" source_method="getTicketStatus"
+               source_key="value"
+               source_value="text"
+          />
+
+        <field name="created_on"
+               type="Calendar"
+               label="COM_ATS_BUCKETS_HEADING_CREATED"
+               readonly="1"
+          />
+
+        <field name="modified_on"
+               type="Calendar"
+               label="COM_ATS_BUCKETS_HEADING_MODIFIED"
+               readonly="1"
+          />
+
+
+    </fieldset>
+</form>

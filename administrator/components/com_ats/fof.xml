@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @package ats
+  @copyright Copyright (c)2011-2016 Nicholas K. Dionysopoulos / AkeebaBackup.com
+  @license GNU GPL v3 or later
+-->
+<fof>
+    <common>
+        <container>
+            <option name="componentNamespace">Akeeba\TicketSystem</option>
+            <option name="factoryClass">FOF30\Factory\MagicFactory</option>
+            <option name="scaffolding">0</option>
+        </container>
+    </common>
+
+    <frontend>
+        <container>
+            <option name="factoryClass">FOF30\Factory\BasicFactory</option>
+            <option name="scaffolding">0</option>
+        </container>
+    </frontend>
+</fof>

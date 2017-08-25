@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  @package ats
+  @copyright Copyright (c)2011-2016 Nicholas K. Dionysopoulos / AkeebaBackup.com
+  @license GNU GPL v3 or later
+-->
+<form
+	cssfiles="media://com_ats/css/backend.css"
+>
+	<fieldset name="basic_configuration"
+		label="COM_ATS_OFFLINESCHEDULES_GROUP_BASIC"
+		description="COM_ATS_OFFLINESCHEDULES_BASIC_DESC"
+		class="span6"
+	>
+		<field name="title" type="Text"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_TITLE"
+			class="input-large"
+			required="true"
+			size="50"
+		 />
+
+		<field name="notickets" type="GenericList"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_NOTICKETS"
+			description="COM_ATS_OFFLINESCHEDULES_FIELD_NOTICKETS_DESC"
+			default="1"
+			class="input-medium"
+			required="true"
+			filter="intval"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="noreplies" type="GenericList"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_NOREPLIES"
+			description="COM_ATS_OFFLINESCHEDULES_FIELD_NOREPLIES_DESC"
+			default="1"
+			class="input-medium"
+			required="true"
+			filter="intval"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="enabled" type="GenericList" label="JSTATUS"
+			labelclass="todo-label"
+			description="JFIELD_PUBLISHED_DESC" class="inputbox"
+			filter="intval" size="1" default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fieldset>
+	<fieldset name="scheduling_group"
+		label="COM_ATS_OFFLINESCHEDULES_GROUP_SCHEDULING"
+		description="COM_ATS_OFFLINESCHEDULES_GROUP_SCHEDULING_DESC"
+		class="span6"
+	>
+		<field name="timestart" type="Text"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_TIMESTART"
+			description="COM_ATS_OFFLINESCHEDULES_FIELD_TIMESTART_DESC"
+			default="00:00:00"
+			class="input-small"
+			required="true"
+			size="50"
+		 />
+
+		<field name="timeend" type="Text"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_TIMEEND"
+			description="COM_ATS_OFFLINESCHEDULES_FIELD_TIMEEND_DESC"
+			default="23:59:59"
+			class="input-small"
+			required="true"
+			size="50"
+		 />
+
+		<field name="weekdays" type="GenericList"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_WEEKDAYS"
+			description="COM_ATS_OFFLINESCHEDULES_FIELD_WEEKDAYS_DESC"
+			default="*"
+			multiple="true"
+			class="input-small"
+			required="true"
+			size="5"
+		>
+			<option value="*">*</option>
+			<option value="0">SUNDAY</option>
+			<option value="1">MONDAY</option>
+			<option value="2">TUESDAY</option>
+			<option value="3">WEDNESDAY</option>
+			<option value="4">THURSDAY</option>
+			<option value="5">FRIDAY</option>
+			<option value="6">SATURDAY</option>
+		</field>
+
+		<field name="days" type="DateInteger"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_DAYS"
+			description="COM_ATS_OFFLINESCHEDULES_FIELD_DAYS_DESC"
+			default="0"
+			multiple="multiple"
+			class="input-small"
+			required="true"
+			size="5"
+			first="1" last="31" step="1"
+		/>
+
+		<field name="months" type="DateInteger"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_MONTHS"
+			description="COM_ATS_OFFLINESCHEDULES_FIELD_MONTHS_DESC"
+			default="0"
+			multiple="multiple"
+			class="input-medium"
+			required="true"
+			size="5"
+			first="1" last="12" step="1"
+			month="1"
+		/>
+
+		<field name="years" type="DateInteger"
+			label="COM_ATS_OFFLINESCHEDULES_FIELD_YEARS"
+			description="COM_ATS_OFFLINESCHEDULES_FIELD_YEARS_DESC"
+			default="0"
+			multiple="multiple"
+			class="input-small"
+			required="true"
+			size="5"
+			first="0" last="10" step="1"
+			year="1"
+		/>
+	</fieldset>
+</form>
