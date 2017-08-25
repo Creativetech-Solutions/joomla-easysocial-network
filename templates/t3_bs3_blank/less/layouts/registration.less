@@ -1,0 +1,314 @@
+.view-registration{
+    body{
+        #gradient .horizontal(#151e34,#1e2f53,0%,70%); 
+    }
+
+    #fd.es{
+        color: white;
+        font-size: 15px;
+        font-family: @arial_family;
+
+        .alreadymember{
+            font-size: 17px;
+            a{
+                color: #0475b6;
+                font-weight: 700;
+            }
+        }
+        .profile-row{
+            max-width: 1033px;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 100px;
+            .creative a.btn{
+                #dowalo-mix .btn-grad-blue();
+            }
+            .business a.btn{
+                #dowalo-mix .btn-grad-green();
+            }
+            .image{
+                text-align: center;
+                display: inline-block;
+                margin-bottom: 30px;
+
+                img{
+                    width: 112px;
+                    height: 112px;
+                    background: transparent;
+                }
+
+            }
+            .heading{
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 27px;
+                color: @orange-color;
+                margin-bottom: 45px;
+                text-transform: uppercase;
+
+            }
+            .description{
+                margin: 0 auto;
+                line-height: 20px;
+
+                &:before{
+                    height: 2px;
+                    background: white;
+                    width: 20%;
+                    margin: 0 auto;
+                    content: '';
+                    display: block;
+                    margin-bottom: 12px;
+                }
+                @media(min-width: @container-md){
+                    max-width: 230px;
+                }
+                div{
+
+                    &:after{
+                        margin-bottom: 12px;
+                        margin-top: 8px;
+                        content: '';
+                        display: block;
+                        height: 1px;
+                        @startcolor: rgba(119,119,119,0.1);
+                        @endcolor : @startcolor;
+                        @middlecolor: rgba(119,119,119,0.9);
+                        background: @middlecolor; /* For browsers that do not support gradients */
+                        background: -webkit-linear-gradient(left, @startcolor , @middlecolor, @endcolor); /* For Safari 5.1 to 6.0 */
+                        background: -o-linear-gradient(right, @startcolor, @middlecolor, @endcolor); /* For Opera 11.1 to 12.0 */
+                        background: -moz-linear-gradient(right, @startcolor, @middlecolor, @endcolor); /* For Firefox 3.6 to 15 */
+                        background: linear-gradient(to right, @startcolor , @middlecolor, @endcolor); /* Standard syntax */
+                    }
+                }
+                & > div:last-child:after{
+                    content: none;
+                }
+            }
+        }
+
+        legend{
+            color: #ff8900;
+        }
+        .form-group .text-note{
+            color:  #8c96a6!important;
+        }
+        .form-actions{
+            background: transparent;
+            border: none;
+        }
+        fd-popover{
+            z-index: 50;
+        }
+        .es-location-suggestions{
+            color: black;
+        }
+        /*        .es-location-textbox input[type=text]{
+                    color: white;
+                }*/
+    }
+}
+
+.view-registration.layout-steps,.view-registration.layout-completed, .view-registration.layout-activation{
+    body{
+        background-color: #fe5128;
+        background-image: url("@{templateimagespath}/why-dowalo.png");
+        #dowalo-mix .background-cover();
+    }
+
+    #t3-content{
+        text-align: center;
+    }
+
+    #fd.es{
+        color: #615d5d;
+        max-width: 464px;
+        margin-top: 40px;
+        @media(max-width: 768px){
+            margin-top: 60px;
+        }
+        @media(max-width: @screen-xs){
+            margin-top: 100px;
+        }
+        .dowalo-header{
+            min-height: 100px;
+            line-height: 90px;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            #gradient .horizontal(#012a40,#181818,0%,70%); 
+            img{
+                /*width: 293px;*/
+                width: 15%;
+            }
+            .heading{
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 35px;
+                color: @orange-color;
+                margin-bottom: 20px;
+                text-transform: capitalize;
+                &.creative{
+                    color: #036a9a;
+                }
+                &.fan{
+                    color: #fe8100;
+                }
+                &.business{
+                    color: #1ebd39;
+                }
+            }
+        }
+        .es-signin-social{
+
+            .or_spacer{
+                padding-bottom: 20px;
+                color: #0a0a0a;
+            }
+        }
+
+        .es-signup-social{
+            .social-login.facebook{
+                background: url("@{templateimagespath}/facebook-signup.png") no-repeat;
+                height: 45px;
+                background-size: 100%;
+                img{
+                    display: none;
+                }
+            }
+            .social-login.twitter{
+                background: url("@{templateimagespath}/twitter-signup.png") no-repeat;
+                height: 45px;
+                background-size: 100%;
+                img{
+                    display: none;
+                }
+            }
+            .sourcecoast {
+                &.login{
+                    a{
+                        display: block;
+                        height: inherit;
+                    }
+                }
+            }
+        }
+
+        #registrationForm{
+            padding: 30px;
+            background: white;
+
+            &.reg-steps-1{
+                .es-field-header,label,[data-element="header"],.text-note{
+                    display: none;
+                }
+                [data-element="birthday"]{
+                    label{
+                        display: block;
+                        text-align: left;
+                        padding: 0;
+                    }
+                    .es-field-datetime-group{
+                        font-size: 0px;
+                    }
+                    .text-note{
+                        color: #000 !important;
+                    }
+
+                    span.birthday-help{
+                        border-radius: 50%;
+                        border: 1px solid;
+                        display: inline-block;
+                        padding: 0px;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        cursor: pointer;
+                        position: absolute;
+                        right: -25px;
+                        top: 20px;
+                        i{
+                            color: #fd5f11;
+                        }
+                    }
+
+                }
+
+            }
+            &.reg-steps-3,&.reg-steps-2{
+                .es-field-header,label,[data-element="header"],.text-note{
+                    /*display: none;*/
+                    legend {
+                        color: #000;
+                        font-size: 18px;
+                    }
+                }
+
+                .form-control{
+                    border-radius: 2px;
+                    height: inherit;
+                    width: 50%;
+                    @media(max-width: @screen-xs){
+                        width: 100%;
+                    }
+                }
+                select{
+                    width: 50%;
+                    @media(max-width: @screen-xs){
+                        width: 100%;
+                    }
+                }
+            }
+            .data{
+                width: 100%;
+                padding: 0;
+            }
+
+            .form-group{
+                margin: 0;
+                .text-note{
+                    color: red !important;;
+                }
+            }
+            .form-control{
+                border-radius: 0;
+                height: 44px;
+            }
+            .control-label {
+                /*text-align: left;
+                padding-left: 0px;*/
+                display: none;
+            }
+            [data-registration-fields-item]{
+                padding: 0; 
+                padding-top: 0!important;
+                margin-bottom: 10px;
+            }
+            .btn-black{
+                .button-variant(white,#232323,#232323);
+                border-radius: 0;
+                display: inline-block;
+                width: 100%;
+                text-transform: uppercase;
+                font-size: 19px;
+                font-weight: 600;
+                margin-top: 15px;
+            }
+            .es-location-map{
+                display: none;
+            }
+
+        }
+    }
+
+    #fd.es.layout-completed,#fd.es.layout-activation{
+        background: white;
+        color: #57595c;
+        padding: 20px;
+
+        input[type="text"]{
+            color: white;
+        }
+    }
+
+
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+    <scripts>
+        <file>js/modernizr.custom.js</file>
+        <file>js/classie.js</file>
+        <file>js/uisearch.js</file>
+        <!--<file>//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js</file>
+        <file>js/custom-scripts.js</file>-->
+    </scripts>
+    <stylesheets>
+        <file>fonts/din/css/font-din.css</file>
+        <file>fonts/avenir/css/font-avenir.css</file>
+        <file>fonts/avenir-next/css/font-avenir-next.css</file>
+    </stylesheets>
+</assets>

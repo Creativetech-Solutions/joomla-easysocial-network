@@ -1,0 +1,310 @@
+@import "content-box.less"; // Modify this for custom colors, font-sizes, etc
+@colororange: #fb6704;
+#fd.es{ 
+    .es-container{
+        margin-top: 17px;
+        .es-audios-featured{
+            .es-comments > li.es-comment:first-child{
+                border-top: none;
+            }
+        }
+        .es-avatar-wrap{
+            a{
+                display: block;
+                width: 50px;
+                height: 50px;
+                #dowalo-mix .btncircle(#00b3fe,#2b21dc);
+                padding: 0;
+                background: none;
+                border-radius: 30px;
+                position: static;
+                &:after{
+                    border-radius: 30px;
+                }	
+            }
+            a.active{
+                display: block;
+                width: 50px;
+                height: 50px;
+                #dowalo-mix .btncircle(#ffc000,#fd5f11);
+                padding: 0;
+                background: none;
+                border-radius: 30px;
+                position: static;
+                box-shadow: 0px 0px 30px #ff6d00;
+                &:after{
+                    border-radius: 30px;
+                    top: -1px;
+                    left: -1px;
+                }
+            }
+        }
+        .es-audio-listing{
+            margin-top: 20px;
+        }
+        a.btn-add-audio{
+            font-size: 19px;
+            color: #fff;
+            overflow: hidden;
+            margin-top: 10px;
+            line-height: 28px;
+            font-family: @avenir_heavy_family;
+        }
+        @media(min-width:@screen-sm){
+            .es-audios-featured{
+                z-index: 1;
+                position: relative;//so that the comments section overlays
+                .es-audio-item{
+                    > div:first-child{
+                        padding-right: 0;
+                    }
+                    > div:last-child{
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        .es-audio-listing{
+            .es-snackbar{
+                background: none;
+                border-radius: none;
+                color: #fff;
+                padding: 0px;
+                margin-bottom: 15px !important;
+                line-height: 20px;
+                #dowalo-mix .dow-gradientborder(#f490ff,#5c02ff);
+                span:first-child {
+                    color: #8c96a6;
+                }
+                span {
+                    color: #f4f4f5;
+                }
+            }
+
+
+
+            .other-audios {
+
+
+                .es-audio-list{
+                    .audiosbottom{
+                        position: relative;
+                    }
+                    .es-stream-control{
+                        position: absolute;
+                        right: 25px;
+                        top: 15px;
+                        font-size: 20px;
+                        .control-button{
+                            color: #fb6704;
+                        }
+                    }
+                    .hap-player{
+                        margin-bottom: 10px;
+                        font-size: 20px;
+                        .hap-player-title{
+                            font-size: 1em;
+                        }
+                        .hap-player-artist{
+                            font-size: 0.7em;
+                        }
+                        .hap-contr-btn-i{
+                            font-size: 0.7em!important;
+                        }
+                    }
+                    .es-audio-title,.time-lapsed{
+                        line-height: normal;
+                        font-size: 18px;
+                        font-family: @dinbold_family;
+                        color: @colororange; 
+                    }
+                    .time-lapsed{
+                        color: white;
+                        text-transform: lowercase;
+                    }
+                    > .es-audio-item{
+                        margin-bottom: 30px;
+                        @media(min-width:@screen-sm){
+                            float: left;
+                            width: 45%;
+                            margin-right: 9.5%;
+                            &:nth-child(2n){
+                                margin-right: 0;
+                            }
+
+                        }
+                        @media(min-width:@screen-md){
+                            float: left;
+                            width: 29%;
+                            margin-right: 6.5%!important;
+                            &:nth-child(3n){
+                                margin-right: 0!important;
+                            }
+
+                        }
+                        @media(min-width:@screen-lg){
+                            float: left;
+                            width: 30%;
+                            margin-right: 5%!important;
+
+                        }
+                    }  
+                }
+
+            }
+
+
+
+
+        }	
+
+        .add-audio-page{
+            .page-title{
+                text-transform: uppercase;
+                font-size: 26px;
+                line-height: normal;
+                padding-bottom: 6px;
+                border-bottom: 1px solid #eeeeee;
+                margin-bottom: 30px;
+                >span:first-child{
+                    color: #a9b3c4;
+
+                }
+                >span:last-child{
+                    color: white;
+
+                }
+            }
+            .box{
+                .box__dragndrop,
+                .box__uploading,
+                .box__success,
+                .box__error {
+                    display: none;
+                }
+                .box__file {
+                    width: 0.1px;
+                    height: 0.1px;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: -1;
+                }
+                .drag-drop,.es-audio-upload-button{
+                    font-size: 30px;
+                    color: white;
+                    font-family: Arial;
+                    text-align: center;
+                    line-height: normal;
+                    font-weight: 700;
+                }
+                .drag-drop{
+                    line-height: 1.9em;
+                    outline: 2px dashed white;
+                    outline-offset: -3px;
+                    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+                    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+                    position: relative;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                }
+                .es-audio-upload-button{
+                    background: #fd5f11;
+                    padding: 0.5em 1.2em;
+                    cursor: pointer;
+                    width: 100%;
+
+                }
+                .thumb__dragndrop,
+                .thumb__uploading,
+                .thumb__success,
+                .thumb__error {
+                    display: none;
+                }
+                .thumb__file {
+                    width: 0.1px;
+                    height: 0.1px;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: -1;
+                }
+                .thumb-upload-button{
+                    font-size: 14px;
+                    color: white;
+                    font-family: Arial;
+                    text-align: center;
+                    line-height: normal;
+                    font-weight: 700;
+                }
+                #pic_area{
+                    outline: 2px dashed white;
+                    outline-offset: 0;//-3
+                    min-height: 200px;
+                    color: white;
+                    font-size: 15px;
+                    font-family: Arial;
+                    line-height: normal;
+                    max-height: 200px;
+                    width: 100%;
+                    overflow: hidden;
+                    display: table;
+                    cursor: pointer;
+                    padding: 30px;
+                    #no-image-div{
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+
+                    i{
+                        font-size: 97px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .has-thumb{
+                    #pic_area{
+                        padding: 0;
+                    }
+                    #pic_area #no-image-div{
+                        display: none;
+                    }
+                    div#thumb-actions{
+                        display: block!important;
+                    }
+                }
+                #thumbnail_img{
+                    max-width: 100%;
+                }
+                .preview{
+                    max-width: 200px;
+                    max-height: 200px;
+                    min-height: 200px;
+                    min-width: 200px;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    margin-top: 15px;
+
+                }
+                #actions{
+                    margin: 20px 0;
+                    text-align: center;
+                }
+                .form-control{
+                    margin-bottom: 8px;
+                }
+                #filename{
+                    color: white;
+                }
+                .btn-orange{
+                    background-color: #fd5f11;
+                    padding: 5px 15px;
+                    color: white;
+                    font-family: Arial;
+                    font-weight: 700;
+                }
+            }
+        }
+    } 
+
+
+}

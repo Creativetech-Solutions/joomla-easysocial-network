@@ -1,0 +1,288 @@
+//loaded in templates/t3_blank/less/vars.less
+// Bootstrap mixins
+
+#dowalo-mix{
+    .fa(@content,@font-size:inherit){
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: @font-size;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        &:before{
+            content: @content;
+        }
+    }
+    .fa-type(@content,@font-size:inherit){
+        content: @content;
+        font-family: fontawesome;
+        font-size: @font-size;
+        color: inherit;
+    }
+    .alt-gradient(@startColor: #ffca00, @endColor: #ff6d00) {
+        -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(@startColor), to(@endColor)) 1 100%;
+        -webkit-border-image: -webkit-linear-gradient(bottom, @startColor, @endColor) 1 100%;
+        -moz-border-image: -moz-linear-gradient(bottom, @startColor, @endColor) 1 100%;
+        -o-border-image: -o-linear-gradient(bottom, @startColor, @endColor) 1 100%;
+        border-image: linear-gradient(to top, @startColor, @endColor) 1 100%;
+    }
+    .vertical-gradient (@startColor: #eee, @endColor: white) {
+        background-color: @startColor;
+        background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+        background: -webkit-linear-gradient(top, @startColor, @endColor);
+        background: -moz-linear-gradient(top, @startColor, @endColor);
+        background: -ms-linear-gradient(top, @startColor, @endColor);
+        background: -o-linear-gradient(top, @startColor, @endColor);
+    }
+    .horizontal-gradient (@startColor: #eee, @endColor: white) {
+        background-color: @startColor;
+        background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+        background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+        background-image: -moz-linear-gradient(left, @startColor, @endColor);
+        background-image: -ms-linear-gradient(left, @startColor, @endColor);
+        background-image: -o-linear-gradient(left, @startColor, @endColor);
+    }
+    .btn-gradient(@default-grad-button-start:@default-grad-button-start;@default-grad-button-end:@default-grad-button-end;@button-grad-color-default:@button-grad-color-default;@button-grad-font-size-default:@button-grad-font-size-default;@button-grad-line-height-default:@button-grad-line-height-default;@button-grad-border-radius:@button-grad-border-radius;  @buttonpadding-vertical:@buttonpadding-vertical; @buttonpadding-horizontal:@buttonpadding-horizontal;){
+        .button-size(@buttonpadding-vertical; @buttonpadding-horizontal; @button-grad-font-size-default; @button-grad-line-height-default; @button-grad-border-radius);
+        #gradient .horizontal(@default-grad-button-start, @default-grad-button-end);  
+        color: @button-grad-color-default;
+        text-transform: uppercase;
+        border: none;
+        font-family: @avenir_black_family;
+    }
+
+    .dow-gradientbordernobg(@gradstart:#ffca00;@gradmiddle:#ff6d00){
+        text-transform: uppercase;
+        background: transparent;
+        font-size: 13px;
+        font-family: @avenir_heavy_family;
+        font-weight: normal;
+        margin: 0;
+        &:after{
+            content: '';
+            margin-top: 10px;
+            @endcolor: transparent;
+            height: 2px;
+            display: block;
+            z-index: 1;
+            background-color: @endcolor;
+            background-image: -webkit-linear-gradient(left, @gradstart, @gradmiddle 74px, @endcolor 135px);
+            background-image: -o-linear-gradient(left, @gradstart, @gradmiddle 74px, @endcolor 135px);
+            background-image: linear-gradient(to right, @gradstart, @gradmiddle 74px, @endcolor 135px);
+            background-repeat: no-repeat;
+            filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@gradstart),argb(@gradmiddle))); // IE9 and down, gets no color-stop at all for proper fallback
+        }
+    }
+
+    .dow-gradientbordertabs(@gradstart:#ffca00;@gradmiddle:#ff6d00){
+        text-transform: uppercase;
+        background: transparent;
+        font-size: 13px;
+        font-family: @avenir_heavy_family;
+        font-weight: normal;
+        margin: 0;
+        &:after{
+            content: '';
+            margin-top: 10px;
+            @endcolor: #3a4557;
+            height: 2px;
+            display: block;
+            z-index: 1;
+            background-color: @endcolor;
+            background-image: -webkit-linear-gradient(left, @gradstart, @gradmiddle 95px, @endcolor 200px);
+            background-image: -o-linear-gradient(left, @gradstart, @gradmiddle 95px, @endcolor 200px);
+            background-image: linear-gradient(to right, @gradstart, @gradmiddle 95px, @endcolor 200px);
+            background-repeat: no-repeat;
+            filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@gradstart),argb(@gradmiddle))); // IE9 and down, gets no color-stop at all for proper fallback
+        }
+    }
+
+    .dow-gradientborder(@gradstart:#ffca00;@gradmiddle:#ff6d00){
+        text-transform: uppercase;
+        background: transparent;
+        font-size: 13px;
+        font-family: @avenir_heavy_family;
+        font-weight: normal;
+        margin: 0;
+        &:after{
+            content: '';
+            margin-top: 10px;
+            @endcolor: #3a4557;
+            height: 2px;
+            display: block;
+            z-index: 1;
+            background-color: @endcolor;
+            background-image: -webkit-linear-gradient(left, @gradstart, @gradmiddle 74px, @endcolor 135px);
+            background-image: -o-linear-gradient(left, @gradstart, @gradmiddle 74px, @endcolor 135px);
+            background-image: linear-gradient(to right, @gradstart, @gradmiddle 74px, @endcolor 135px);
+            background-repeat: no-repeat;
+            filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@gradstart),argb(@gradmiddle))); // IE9 and down, gets no color-stop at all for proper fallback
+        }
+    }
+
+    .btn(@gradstart:@default-grad-button-start;@gradend:@default-grad-button-end){
+        //(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) 
+
+
+        &:after {
+            position: absolute;
+            top: -1px; bottom: -1px;
+            left: -1px; right: -1px;
+            #dowalo-mix .vertical-gradient(@gradstart, @gradend);
+            content: '';
+            z-index: -1;
+            border-radius: 8px;
+        }
+        border: 2px solid transparent;
+        position: relative;
+        background: #0e1219;
+        background-clip: padding-box;
+        font-size: 12px;
+        font-family: @avenir_medium_family;
+        .button-size(9px; 19px;12px; 12px; 10px);
+        display: inline-block;
+    }  
+    .btn-border(@gradstart:@default-border-btn-grad-start;@gradend:@default-border-btn-grad-end;@fontcolor:@default-border-btn-font;@fonthover:@default-border-btn-font-hover;){
+        &:after {
+            position: absolute;
+            top: -2px; bottom: -2px;
+            left: -2px; right: -2px;
+            background: linear-gradient(@gradstart, @gradend);
+            content: '';
+            z-index: -1;
+            border-radius: 8px;
+        }
+        color: @fontcolor;
+        border: 2px solid transparent;
+        position: relative;
+        background: @defaultbgcolor;
+        background-clip: padding-box;
+        font-size: 12px;
+        font-family: @avenir_medium_family;
+        .button-size(5px; 19px;12px; 12px; 10px);
+        display: inline-block;
+        &:hover{
+            color: @fonthover;
+        }
+    }
+    .btncircle(@gradstart:@default-grad-button-start;@gradend:@default-grad-button-end){
+        //(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) 
+
+
+        &:after {
+            position: absolute;
+            top: -2px; bottom: -2px;
+            left: -2px; right: -2px;
+            background: linear-gradient(@gradstart, @gradend);
+            content: '';
+            z-index: -1;
+            border-radius: 50%;
+        }
+        border: 1px solid transparent;
+        position: relative;
+        background: #0e1219;
+        background-clip: padding-box;
+        font-size: inherit;
+        font-family: @avenir_medium_family;
+    }
+
+    .background-cover{
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    .socialBtn{ /* global button class */
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        font-size: 21px;
+        font-weight: normal;
+        line-height: 2em;
+        border-radius: 20px;
+        -moz-border-radius:20px;
+        -webkit-border-radius:20px;
+        background: #2e3f53;
+        color: #bcc0c8;
+        margin-right: 10%;
+        margin-bottom: 20px;
+        &:hover{
+            background: #fff;
+        }
+    }
+
+    .btn-grad-blue{
+        #dowalo-mix .btn-gradient(#00aa8a,#0081b3);
+    }
+    .btn-grad-green{
+        #dowalo-mix .btn-gradient(#10b43e,#57a203);
+    }
+
+    //works with individual elements inside. doesn't work well with divs
+    //not for block elements.
+    .vertical-align(@position: relative;@top: 50%) {
+        position: @position;
+        top: @top;
+        -webkit-transform: translateY(-@top);
+        -ms-transform: translateY(-@top);
+        transform: translateY(-@top);
+    }
+
+    .flexrow-sm{
+        @media(min-width:@screen-sm){
+            /*                flex-direction: column;*/
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+        }
+
+    }
+    .universal-function(@screensize;@property;@value;@symbol: ~''){
+        .@{screensize}-@{property}-@{value} { Ignore: ~"a;@{property}:@{value}@{symbol}"; }
+    }
+
+}
+@vargenerate-xs : xs;
+body,body div#fd .es-container{
+    #dowalo-mix .universal-function(@vargenerate-xs;margin-top;0);#dowalo-mix .universal-function(@vargenerate-xs;margin-top;10;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-top;20;px); #dowalo-mix .universal-function(@vargenerate-xs;margin-top;30;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-top;40;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-top;50;px);
+    #dowalo-mix .universal-function(@vargenerate-xs;margin-right;0);#dowalo-mix .universal-function(@vargenerate-xs;margin-right;10;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-right;20;px); #dowalo-mix .universal-function(@vargenerate-xs;margin-right;30;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-right;40;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-right;50;px);
+    #dowalo-mix .universal-function(@vargenerate-xs;margin-left;0);#dowalo-mix .universal-function(@vargenerate-xs;margin-left;10;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-left;20;px); #dowalo-mix .universal-function(@vargenerate-xs;margin-left;30;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-left;40;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-left;50;px);
+    #dowalo-mix .universal-function(@vargenerate-xs;margin-bottom;0);#dowalo-mix .universal-function(@vargenerate-xs;margin-bottom;10;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-bottom;20;px); #dowalo-mix .universal-function(@vargenerate-xs;margin-bottom;30;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-bottom;40;px);#dowalo-mix .universal-function(@vargenerate-xs;margin-bottom;50;px);
+}
+.spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer15 { height: 15px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer20 { height: 20px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer25 { height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer30 { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer35 { height: 35px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer40 { height: 40px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer45 { height: 45px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer70 { height: 70px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer80 { height: 80px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer90 { height: 90px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+
+
+body a.btn-border,body div#fd a.btn-border{
+    #dowalo-mix .btn-border();
+
+    >.fa{
+        margin-right: 0.5em;
+    }
+}
+
+.inline-block{
+    display: inline-block;
+}

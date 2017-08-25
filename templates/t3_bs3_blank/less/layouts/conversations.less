@@ -1,0 +1,71 @@
+.view-conversations{
+    #fd.es{
+        .es-container {
+            .es-sidebar{
+                border-right: 0px;
+                .es-widget-head{
+                    border-bottom: 0px;
+                    #dowalo-mix .dow-gradientborder();
+                }
+            }
+            .es-content{
+                .es-item {
+                    background: #fff;
+
+                    .muted {
+                        color: #716f6f;
+                    }
+
+                }
+                li.conversation-item.unread>div {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    #fd.es.layout-read{
+        .conversation-participants-title{
+            #dowalo-mix .dow-gradientborder();
+        }
+        .conversation-files-title{
+            #dowalo-mix .dow-gradientborder();
+        }
+        &.view-conversations{
+            ul.conversation-messages{
+                > li{
+                    &.message-item{
+                        &.message-right{
+                            .media-object{
+                                float: left;
+                                margin-right: 10px;
+                                margin-left: 0;
+                            }
+                            .es-message-bubble {
+                                background: #fff;
+                            }
+                        }
+                    }
+                } 
+            }
+            .form-actions{
+                background: rgba(0, 0, 0, 0);
+                border: 0px;
+            }
+            textarea {
+                color: #899dbd;
+            }
+        }
+
+    }
+
+    #fd.es.layout-compose{
+        .form-actions{
+            background: transparent;
+            border: 0px;
+        }
+        textarea {
+            color: #899dbd;
+        }
+    }
+}

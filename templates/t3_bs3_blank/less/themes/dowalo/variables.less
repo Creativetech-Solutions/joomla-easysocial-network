@@ -1,0 +1,202 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+@screen-xxs-max : (@screen-xs)-1;
+@screen-xxs-min : 1px;
+//for easysocial. I think easysocial is using this width for breakpoints. It would be nice to make it 768px
+//which is the standard @screen-sm
+@maxwidth-breakpoint: 640px;
+@maxwidth-breakpoint-above: (@maxwidth-breakpoint)+1;
+
+@imagespath: "../../../../images";
+@templateimagespath: "@{imagespath}/template";
+/* some styles come from the variable-custom.less defined by  thememagic
+/* custom styles */
+@avenir_black_family: 'Avenir-Black';
+/*used as the base */
+@avenir_medium_family: 'Avenir-Medium';
+@avenir_light_family:  'Avenir-Light';
+@avenir_heavy_family: 'Avenir-Heavy';/*heavy font as the heading base */
+@avenir_roman_family: 'Avenir-Roman';
+@avenir_book_family: 'Avenir-Book';
+@avenir_next_ultralight_family: 'AvenirNext-UltraLight';
+
+@arial_family: Arial;
+
+@font-family-base: 'Avenir-Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+@headings-font-family: @avenir_heavy_family;
+@dinbold_family: 'dinbold';
+@menu_bg: rgba(25,31,40,0.85);
+
+/*custom colors
+*/
+@ddarkgrey: #57595c;
+@off-grey-color : #adb7c7; /*menu top color */
+@off-white-color: #dfe6f0;//top menu login text color
+@h1-bright: #ff3000; //slider home page 
+@grey-text: #776a6b; //slider top text
+@grey-light-text: #bcc0c8; //create collaborate text
+@goldenlink: #ffa200;
+@defaultbgcolor: #10151b;
+@default-border-btn-grad-start: #ffc000;
+@default-border-btn-grad-end: #fd5f11;
+@default-border-btn-font:#b4b8c0;
+@default-border-btn-font-hover:white;
+@greyseparator: #b9c4d6;
+/* the rest */
+@default-gradient-start: #f0bf00;
+@default-gradient-end: #f06700;
+
+
+@header-height: 40px;
+@search-height: @header-height;
+@header-color: #6e819e;
+@search-open-width: 250px;
+@search-close-width: 50px;
+
+@buttonpadding-vertical: 20px;
+@buttonpadding-horizontal: 46px;
+@default-grad-button-start: #ff6900;
+@default-grad-button-end: #ff3200;
+@button-grad-color-default: white;
+@button-grad-font-size-default: 16px;
+@button-grad-line-height-default: 16px;
+@button-grad-border-radius: 16px;
+
+
+@orange-color: #ff8900;
+@green-color:  #11b53e;
+@blue-color:  #00959f;
+/*#191f28;*/
+/*end of custom styles */
+// Darken Grays Value
+// -------------------------
+@gray-darker:            #1f1f1f;
+@gray-dark:              #2d2d2d;
+@gray:                   #4b4b4b;
+@gray-light:             #5a5a5a;
+@gray-lighter:           #878787;
+
+
+// Brand colors
+// -------------------------
+@brand-primary:                 @blue;
+
+
+// Scaffolding
+// -------------------------
+@body-bg:                       @gray-darker;
+@text-color:                    @gray-lighter;
+
+@headings-color:                #fff;
+@jumbotron-heading-color:       @headings-color;
+
+
+// Links
+// -------------------------
+@link-color:                    #fff;
+
+
+// Forms
+// -------------------------
+@input-bg:                       @gray-dark;
+@input-border:                   @gray-darker;
+
+
+// Buttons
+// -------------------------
+@btn-default-color:              #fff;
+@btn-default-bg:                 @gray-dark;
+@btn-default-border:             @gray-darker;
+
+
+// Hr border color
+// -------------------------
+@hr-border:                      @gray-dark;
+
+
+// Dropdowns
+// -------------------------
+@dropdown-bg:                    @navbar-inverse-bg;
+@dropdown-border:                @navbar-inverse-border;
+@dropdown-fallback-border:       #555;
+@dropdown-divider-bg:            #333;
+
+@dropdown-link-color:            @gray-lighter;
+@dropdown-link-hover-color:      #fff;
+@dropdown-link-hover-bg:         @gray-dark;
+
+@dropdown-caret-color:           @gray-lighter;
+
+
+// Navbar: Using Navbar Inverse Variables
+// --------------------------------------
+@navbar-default-color:                    @gray-lighter;
+@navbar-default-bg:                       @gray-dark;
+@navbar-default-border:                   @gray-darker;
+
+// Navbar links
+@navbar-default-link-color:               @gray-lighter;
+@navbar-default-link-hover-color:         @navbar-inverse-link-hover-color;
+@navbar-default-link-hover-bg:            @navbar-inverse-link-hover-bg;
+@navbar-default-link-active-color:        @navbar-inverse-link-active-color;
+@navbar-default-link-active-bg:           @navbar-inverse-link-active-bg;
+@navbar-default-link-disabled-color:      @navbar-inverse-link-disabled-color;
+@navbar-default-link-disabled-bg:         @navbar-inverse-link-disabled-bg;
+
+// Navbar brand label
+@navbar-default-brand-color:              @navbar-inverse-brand-color;
+@navbar-default-brand-hover-color:        @navbar-inverse-brand-hover-color;
+@navbar-default-brand-hover-bg:           @navbar-inverse-brand-hover-bg;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:          @navbar-inverse-toggle-hover-bg;
+@navbar-default-toggle-border-color:      @navbar-inverse-toggle-border-color;
+
+
+// Pagination
+// -------------------------
+@pagination-bg:                        @gray-dark;
+@pagination-border:                    @gray-darker;
+
+@pagination-hover-bg:                  @gray;
+
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-color:              #fff;
+
+@pagination-disabled-color:            @gray;
+
+
+// Breadcrumbs
+// -------------------------
+@breadcrumb-bg:                 @gray-dark;
+@breadcrumb-color:              @gray-lighter;
+@breadcrumb-active-color:       @white;
+
+
+
+//
+// T3 TEMPLATE STYLES
+// --------------------------------------------------
+
+// Spotlight Styles
+// -------------------------
+@t3-spotlight-background:        @body-bg;
+@t3-spotlight-text-color:        @text-color;
+
+
+// Footer Styles
+// -------------------------
+@t3-footer-background:           @body-bg;
+@t3-footer-text-color:           @text-color;
+
+@t3-footer-module-title-color:   @headings-color;

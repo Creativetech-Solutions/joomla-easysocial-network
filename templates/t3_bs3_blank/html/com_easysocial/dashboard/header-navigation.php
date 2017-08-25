@@ -1,0 +1,120 @@
+<?php
+$view = JFactory::getApplication()->input->get('view', '');
+$active = ' class="active" ';
+//$loggedinuserid = $this->my->id;
+$currentProfile = $user->getProfile()->get('title');
+?>
+<div class="es-profile-header-footer">
+    <nav class="es-list-vertical-divider pull-left">
+
+        <span <?= ($view == "dashboard" OR $view == "profile") ? $active : ""; ?>>
+            <a href="<?php
+            //echo FRoute::dashboard(array('uid' => $user->getAlias(), 'type' => SOCIAL_TYPE_USER));
+            echo $user->getPermalink();
+            ?>">
+                <i class="fa fa-dashboard"></i>
+                <?php echo JText::_('COM_EASYSOCIAL_USER_DASHBOARD'); ?>
+            </a>
+        </span>
+
+        <?php
+        //if ($currentProfile == 'Business') {
+            $Projectapp = FD::table('app');
+            $Projectapp->loadByElement('projects', SOCIAL_APPS_GROUP_USER, 'apps');
+            $appLid = 0;
+            if ($view == 'apps') {
+                $appLid = str_replace('projects', '', JFactory::getApplication()->input->get('id', ''));
+            }
+            ?>
+            <span <?= $appLid == str_replace(':projects', '', $Projectapp->getAlias()) ? $active : ""; ?>>
+                <a href="<?php
+                //echo FRoute::videos(array('layout'=>'audios', 'uid' => $user->getAlias(), 'type' => SOCIAL_TYPE_USER));
+                echo FRoute::apps(array('layout' => 'canvas', 'id' => $Projectapp->getAlias(), 'uid' => $user->getAlias(), 'type' => SOCIAL_TYPE_USER));
+                ?>">
+                    <i class="fa fa-briefcase"></i>
+                    <?php echo JText::_('COM_EASYSOCIAL_TOOLBAR_PROFILE_PROJECTS'); ?>
+                </a>
+            </span>
+        <?php //} ?> 
+
+        <?php if ($this->config->get('photos.enabled')) { ?>
+            <span <?= $view == "albums" ? $active : ""; ?>>
+                <a href="<?php echo FRoute::albums(array('uid' => $user->getAlias(), 'type' => SOCIAL_TYPE_USER)); ?>">
+                    <i class="fa fa-picture-o"></i>
+                    <?php echo JText::sprintf(ES::string()->computeNoun('COM_EASYSOCIAL_USER_ALBUMS', $user->getTotalAlbums()), $user->getTotalAlbums()); ?>
+                </a>
+            </span>
+        <?php } ?>
+
+        <?php if ($this->config->get('video.enabled', true) && $this->access->allowed('videos.create')) { ?>
+            <span <?= $view == "videos" ? $active : ""; ?>>
+                <a href="<?php echo FRoute::videos(array('uid' => $user->getAlias(), 'type' => SOCIAL_TYPE_USER)); ?>">
+                    <i class="fa fa-film"></i>
+                    <?php echo JText::sprintf(ES::string()->computeNoun('COM_EASYSOCIAL_GROUPS_VIDEOS', $user->getTotalVideos()), $user->getTotalVideos()); ?>
+                </a>
+            </span>
+            <?php
+            if ($currentProfile == 'Business' || $currentProfile == 'Creative') {
+                $Audioapp = FD::table('app');
+                $Audioapp->loadByElement('audios', SOCIAL_APPS_GROUP_USER, 'apps');
+                $appLid = 0;
+                if ($view == 'apps') {
+                    $appLid = str_replace('audios', '', JFactory::getApplication()->input->get('id', ''));
+                }
+                ?>
+                <span <?= $appLid == str_replace(':audios', '', $Audioapp->getAlias()) ? $active : ""; ?>>
+                    <a href="<?php
+                    //echo FRoute::videos(array('layout'=>'audios', 'uid' => $user->getAlias(), 'type' => SOCIAL_TYPE_USER));
+                    echo FRoute::apps(array('layout' => 'canvas', 'id' => $Audioapp->getAlias(), 'uid' => $user->getAlias(), 'type' => SOCIAL_TYPE_USER));
+                    ?>">
+                        <i class="fa fa-music"></i>
+                        <?php echo JText::_('COM_EASYSOCIAL_TOOLBAR_PROFILE_AUDIO'); ?>
+                    </a>
+                </span>
+            <?php } ?> 
+        <?php } ?>
+
+        <span <?= $view == "events" ? $active : ""; ?>>
+            <a href="<?php echo FRoute::events(array('uid' => $user->getAlias(true, true), 'type' => SOCIAL_TYPE_USER)); ?>">
+                <i class="fa fa-calendar"></i>
+                <?php echo JText::_('COM_EASYSOCIAL_TOOLBAR_PROFILE_EVENTS'); ?>
+            </a>
+        </span>
+
+        <?php /* ?><span>
+          <a href="<?php echo FRoute::friends( array( 'userid' => $user->getAlias() ) );?>">
+          <i class="fa fa-users"></i>
+          <?php echo JText::sprintf( FD::string()->computeNoun( 'COM_EASYSOCIAL_GENERIC_FRIENDS' , $user->getTotalFriends() ) , $user->getTotalFriends() ); ?>
+          </a>
+
+          </span><?php */ ?>
+        <?php if ($this->config->get('followers.enabled')) { ?>
+            <?php /* ?><span <?= $view == "followers" ? $active : ""; ?>>
+              <a href="<?php echo FRoute::followers(array('userid' => $user->getAlias())); ?>">
+              <i class="fa fa-share-alt"></i>
+              <?php echo $user->getTotalFollowers(); ?> <?php echo JText::_(FD::string()->computeNoun('COM_EASYSOCIAL_FOLLOWERS', $user->getTotalFollowers())); ?>
+              </a>
+              </span><?php */ ?>
+        <?php } ?>
+
+        <?php /* ?><?php if( $this->config->get('badges.enabled' ) && $user->badgesViewable( FD::user()->id ) ){ ?>
+          <span>
+          <a href="<?php echo FRoute::badges( array( 'layout' => 'achievements', 'userid' => $user->getAlias()));?>">
+          <i class="fa fa-trophy"></i>
+          <?php echo $user->getTotalBadges();?> <?php echo JText::_( FD::string()->computeNoun( 'COM_EASYSOCIAL_ACHIEVEMENTS' , $user->getTotalBadges() ) ); ?>
+          </a>
+          </span>
+          <?php } ?><?php */ ?>
+
+    </nav>
+
+    <!--<nav class="pull-right">
+    <?php if ($this->template->get('profile_type')) { ?>
+                                                        <span>
+                                                            <a href="<?php echo $user->getProfile()->getPermalink(); ?>" class="profile-type">
+                                                                <i class="fa fa-list-alt"></i> <?php echo $user->getProfile()->get('title'); ?>
+                                                            </a>
+                                                        </span>
+    <?php } ?>
+    </nav>-->
+</div>

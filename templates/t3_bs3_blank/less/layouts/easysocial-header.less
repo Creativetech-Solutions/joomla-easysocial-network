@@ -1,0 +1,234 @@
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+body div#fd.es{
+
+
+    .es-avatar{
+        border-radius: 50%;
+    }
+    .es-profile-header{
+        border: none;
+        position: relative;
+        .es-profile-header-avatar{
+            bottom: 16px;
+            @media(max-width: @screen-sm){
+                bottom: 40%;
+                left: 40%;
+                margin-left: -45px;
+            }
+            @media(max-width: @screen-xs){
+                bottom: 40%;
+                left: 30%;
+                margin-left: -25px;
+            }
+        }
+        .es-online-status{
+            top: 75%;
+            .es-status-on{
+                background: #3ce570;
+                border-color: black;
+            }
+            @media(max-width: @container-sm){
+                /*top: 70px;*/
+                right: -5px;
+            }
+            @media (max-width: 750px){
+                right: -5px;
+            }
+        }
+
+        .es-profile-header-body{
+            position: absolute;
+            bottom: 19%;
+            @media(max-width: @screen-xs){
+                bottom: 20%;
+            }
+            color: white;
+            margin-left: 15px;
+            @media(min-width:@screen-sm){
+                margin-left: 177px;
+            }
+
+            h2 a{
+                font-size: 28px;
+                color: white;
+                /*max-width: 79%;*/
+                display: inline-block;
+            }
+            .profile-switch-dropdown{
+                position: relative;
+                cursor: pointer;
+                padding-bottom: 10px;
+                    float: right;
+                    margin-left: 10px;
+                a{
+                    display: block;
+                    padding: 3px 20px;
+                    clear: both;
+                    font-weight: normal;
+                    line-height: 16px;
+                    color: #333;
+                    white-space: nowrap;
+                }
+                .dropdown-menu.dropdown-profile-switch{
+                    left: -60px;
+                }
+            }
+            h2 img{
+                display: inline-block;
+                vertical-align: top;
+            }
+            .first_speciality{
+                font-size: 14px;
+                ul{
+                    list-style: none;
+                    padding: 0px;
+                }
+            }
+            .user_followers {
+                font-size: 14px;
+                ul{
+                    list-style: none;
+                    padding: 0px;
+                }
+            }
+            .header-add-location{
+                color: #ffa200;
+                font-size: 14px;
+            }
+            nav.es-list-vertical-divider{
+                span{
+                    display: block;
+                }
+                >:not(:first-child) {
+                    margin-left: 0px;
+                    padding-left: 0px;
+                    border-left: 0px;
+                }
+            }
+        }
+        .es-profile-header-action{
+            position: absolute;
+            right: 20px;
+            bottom: 19%;
+            @media(max-width: @screen-sm){
+               bottom: 15%;
+            }
+            width: auto;
+            z-index: 99;
+            a.btn-es.btn-sm{
+                border: 2px solid transparent !important;
+                overflow: inherit;
+                color: #fff !important;
+                padding: 3px 9px !important;
+                background: rgba(14, 18, 25,0.8) !important;
+                #dowalo-mix .btn(#7c680f,#5d310f);
+                &:after{
+                    top: -4px;
+                    bottom: -4px;
+                    left: -4px;
+                    right: -4px;
+                    border-radius: 10px;
+                }
+            }
+            a.btn.btn-es-primary.btn-action-followers.is-following.btn-sm{
+                border: 2px solid transparent !important;
+                overflow: inherit;
+                color: #fff !important;
+                padding: 3px 9px !important;
+                background: rgba(14, 18, 25,0.8) !important;
+                #dowalo-mix .btn(#7c680f,#5d310f);
+                &:after{
+                    top: -4px;
+                    bottom: -4px;
+                    left: -4px;
+                    right: -4px;
+                    border-radius: 10px;
+                }
+            }
+            .user-message{
+                float: left;
+                margin-right: 10px;
+                @media(max-width: @screen-sm){
+                    span{
+                        display: none;
+                    }
+                }
+            }
+            .friendsAction{
+                float: left;
+                margin-top: 0px;
+                margin-right: 10px;
+                @media(max-width: @screen-sm){
+                    a.btn.btn-es-primary.btn-action-followers.is-following.btn-sm{
+                        border: 0px transparent !important;
+                        overflow: inherit;
+                        color: #333 !important;
+                        padding: 3px 20px !important;
+                        background: transparent !important;
+                        #dowalo-mix .btn(transparent,transparent);
+                        &:after{
+                            top: -4px;
+                            bottom: -4px;
+                            left: -4px;
+                            right: -4px;
+                            border-radius: 0px;
+                        }
+                        i{
+                            display: none;
+                        }
+                    }
+                    a.btn-es.btn-sm.not-is-following{
+                        border: 0px transparent !important;
+                        overflow: inherit;
+                        color: #333 !important;
+                        padding: 3px 20px !important;
+                        background: transparent !important;
+                        #dowalo-mix .btn(transparent,transparent);
+                        &:after{
+                            top: -4px;
+                            bottom: -4px;
+                            left: -4px;
+                            right: -4px;
+                            border-radius: 0px;
+                        }
+                        i{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .followAction{
+                float: left;
+                margin-bottom: 0;
+                margin-top: 0px;
+                &.admin-tools{
+                    @media(max-width: @screen-sm){
+                        span{
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            @media(max-width: @screen-sm){
+                /*display: none;*/
+            }
+
+            &.own-profile{
+                @media(max-width: @screen-sm){
+                    display: block;
+                }
+            }
+        }
+    }
+    .es-cover-container{
+        padding-top: 482px;
+        @media(max-width: @screen-xs){
+            padding-top: 345px;
+        }
+        @media(max-width: @screen-sm){
+            padding-top: 355px;
+        }
+    }
+}

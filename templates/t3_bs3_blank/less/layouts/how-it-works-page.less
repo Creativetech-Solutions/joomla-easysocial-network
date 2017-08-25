@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 24, 2017, 4:42:11 PM
+    Author     : i5
+*/
+
+.t3-footer {
+    background: #1b232d;
+    color: #6e819e;
+    .t3-copyright{
+        background: #10151b;
+    }
+    @media(min-width: @container-md){
+        .t3-spotlight > .col-md-3:nth-child(2) .t3-module{
+            max-width: 198px;
+        }
+        .t3-spotlight > .col-md-3:nth-child(3) .t3-module{
+            max-width: 245px;
+        }
+        .t3-spotlight > .col-md-3:nth-child(4) .t3-module{
+            max-width: 210px;
+        }
+    }
+    .t3-module{
+        @media(min-width: @container-md){
+            max-width: 245px;
+        }
+        h3,.module-title{
+            #dowalo-mix .dow-gradientborder();
+        }
+
+        .module-ct{
+            padding-top: 23px;
+            color: #6e819e;
+            line-height: 18px;
+            padding-bottom: 25px;
+            @media(min-width: @container-md){
+                padding-bottom: 100px;
+            }
+            a{
+                text-decoration: none;
+                color: #a9b3c4;
+            }
+            p{
+                margin: 0;
+            }
+            ul > li{    
+                padding: 0;
+                border: none;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #3a4658;
+                &:last-child{
+                    border: none;
+                }
+                a{
+                    text-decoration: none;
+                    color: #a9b3c4;
+                }
+            }
+        }
+
+
+        #social{
+            padding-top: 30px;
+        }
+    }
+    .t3-spotlight > .col-md-3:nth-child(1) .module-ct{
+        padding-top: 0;
+    }
+    .icon{
+        float: left;
+        width: 14%;
+        text-align: center;
+    }
+    .detail{
+        float: left;
+        padding-left: 14px;
+        width: 86%;
+        padding-bottom: 20px;
+        color: #a9b3c4;
+    }
+    .header{
+        padding-bottom: 9px;
+        color: #6e819e;
+    }
+}

@@ -1,0 +1,129 @@
+.view-login{
+    body{
+        background-color: #fe5128;
+        background-image: url("@{templateimagespath}/why-dowalo.png");
+        #dowalo-mix .background-cover();
+    }
+
+    #t3-content{
+        text-align: center;
+        padding-top: 55px;
+    }
+    .t3-footer {
+        display: none;
+    }
+
+    #fd.es{
+        background: white;
+        max-width: 464px;
+        .dowalo-header{
+            min-height: 187px;
+            line-height: 187px;
+            text-align: center;
+            #gradient .horizontal(#012a40,#181818,0%,70%); 
+            img{
+                width: 293px;
+            }
+        }
+        .es-login-box {
+            border: 0px;
+            padding: 15px;
+            padding-top: 0;
+            .btn-login.btn-es-success,.btn-login.btn-es-success:focus {
+                color: #fff !important;
+                border: 1px solid #ff5d2d !important;
+                background-image: -webkit-linear-gradient(top,#ff5d2d 0,#ff5d2d 100%) !important;
+                background-image: linear-gradient(to bottom,#ff5d2d 0,#ff5d2d 100%) !important;
+                background-repeat: repeat-x !important;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5d2d',endColorstr='#ff5d2d',GradientType=0) !important;
+                background-position: 0 0;
+                text-transform: uppercase;
+            }
+            .social-login.facebook{
+                background: url("@{templateimagespath}/login_fb.jpg") no-repeat;
+                height: 45px;
+                background-size: 100%;
+                img{
+                    display: none;
+                }
+            }
+            .social-login.twitter{
+                background: url("@{templateimagespath}/login_tw.jpg") no-repeat;
+                height: 45px;
+                background-size: 100%;
+                img{
+                    display: none;
+                }
+            }
+            .sourcecoast {
+                &.login{
+                    a{
+                        display: block;
+                        height: inherit;
+                    }
+                }
+            }
+            .register-column.simple-register{
+                padding-top: 0;
+            }
+            .forgot-password{
+                font-size: 16px;
+            }
+
+
+        }
+        .simple-register{
+            .login-box-title{
+                font-size: 16px;
+                color: #000;
+            }
+        }
+
+        #registrationForm{
+            padding: 30px;
+            background: white;
+
+            .es-field-header,label,[data-element="header"],.text-note{
+                display: none;
+            }
+            .data{
+                width: 100%;
+                padding: 0;
+            }
+
+            .form-group{
+                margin: 0;
+            }
+            .form-control{
+                border-radius: 0;
+                height: 44px;
+            }
+            [data-registration-fields-item]{
+                padding: 0; padding-top: 0!important;
+            }
+            .btn-black{
+                .button-variant(white,#232323,#232323);
+                border-radius: 0;
+                display: block;
+                width: 100%;
+                text-transform: uppercase;
+                font-size: 19px;
+                font-weight: 600;
+                margin-top: 15px;
+            }
+
+        }
+    }
+
+    #fd.es.layout-completed{
+        background: white;
+        color: #57595c;
+        padding: 20px;
+
+        input[type="text"]{
+            color: white;
+        }
+    }
+
+
+}
