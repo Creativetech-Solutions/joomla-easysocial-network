@@ -1,0 +1,43 @@
+.view-friends #fd.es .es-container .es-sidebar {
+  border-right: 0px;
+}
+.view-friends #fd.es .es-container .es-sidebar .es-widget-head {
+  border-bottom: 0px;
+  text-transform: uppercase;
+  background: transparent;
+  font-size: 13px;
+  font-family: 'Avenir-Heavy';
+  font-weight: normal;
+  margin: 0;
+}
+.view-friends #fd.es .es-container .es-sidebar .es-widget-head:after {
+  content: '';
+  margin-top: 10px;
+  height: 2px;
+  display: block;
+  z-index: 1;
+  background-color: #3a4557;
+  background-image: -webkit-linear-gradient(left, #ffca00, #ff6d00 74px, #3a4557 135px);
+  background-image: -o-linear-gradient(left, #ffca00, #ff6d00 74px, #3a4557 135px);
+  background-image: linear-gradient(to right, #ffca00, #ff6d00 74px, #3a4557 135px);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffca00', endColorstr='#ffff6d00', GradientType=1);
+}
+.view-friends #fd.es .es-container .es-content .es-item {
+  background: #fff;
+}
+.view-friends #fd.es .es-container .es-content .es-item .es-friends-links > li .muted {
+  color: #716f6f;
+}
+.view-friends #fd.es.layout-invite .form-actions {
+  background: rgba(0, 0, 0, 0);
+  border: 0px;
+}
+@media (max-width: 768px) {
+  .view-friends #fd.es.layout-invite .form-horizontal .control-group .controls {
+    margin-left: 0;
+  }
+  .view-friends #fd.es.layout-invite .form-horizontal .control-group .controls .wf-editor-header {
+    min-height: 0px;
+  }
+}

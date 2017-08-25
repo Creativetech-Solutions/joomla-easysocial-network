@@ -1,0 +1,162 @@
+.view-login body {
+  background-color: #fe5128;
+  background-image: url("../../../images/template/why-dowalo.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.view-login #t3-content {
+  text-align: center;
+  padding-top: 55px;
+}
+.view-login .t3-footer {
+  display: none;
+}
+.view-login #fd.es {
+  background: white;
+  max-width: 464px;
+}
+.view-login #fd.es .dowalo-header {
+  min-height: 187px;
+  line-height: 187px;
+  text-align: center;
+  background-image: -webkit-linear-gradient(left, #012a40 0%, #181818 70%);
+  background-image: -o-linear-gradient(left, #012a40 0%, #181818 70%);
+  background-image: linear-gradient(to right, #012a40 0%, #181818 70%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff012a40', endColorstr='#ff181818', GradientType=1);
+}
+.view-login #fd.es .dowalo-header img {
+  width: 293px;
+}
+.view-login #fd.es .es-login-box {
+  border: 0px;
+  padding: 15px;
+  padding-top: 0;
+}
+.view-login #fd.es .es-login-box .btn-login.btn-es-success,
+.view-login #fd.es .es-login-box .btn-login.btn-es-success:focus {
+  color: #fff !important;
+  border: 1px solid #ff5d2d !important;
+  background-image: -webkit-linear-gradient(top, #ff5d2d 0, #ff5d2d 100%) !important;
+  background-image: linear-gradient(to bottom, #ff5d2d 0, #ff5d2d 100%) !important;
+  background-repeat: repeat-x !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5d2d', endColorstr='#ff5d2d', GradientType=0) !important;
+  background-position: 0 0;
+  text-transform: uppercase;
+}
+.view-login #fd.es .es-login-box .social-login.facebook {
+  background: url("../../../images/template/login_fb.jpg") no-repeat;
+  height: 45px;
+  background-size: 100%;
+}
+.view-login #fd.es .es-login-box .social-login.facebook img {
+  display: none;
+}
+.view-login #fd.es .es-login-box .social-login.twitter {
+  background: url("../../../images/template/login_tw.jpg") no-repeat;
+  height: 45px;
+  background-size: 100%;
+}
+.view-login #fd.es .es-login-box .social-login.twitter img {
+  display: none;
+}
+.view-login #fd.es .es-login-box .sourcecoast.login a {
+  display: block;
+  height: inherit;
+}
+.view-login #fd.es .es-login-box .register-column.simple-register {
+  padding-top: 0;
+}
+.view-login #fd.es .es-login-box .forgot-password {
+  font-size: 16px;
+}
+.view-login #fd.es .simple-register .login-box-title {
+  font-size: 16px;
+  color: #000;
+}
+.view-login #fd.es #registrationForm {
+  padding: 30px;
+  background: white;
+}
+.view-login #fd.es #registrationForm .es-field-header,
+.view-login #fd.es #registrationForm label,
+.view-login #fd.es #registrationForm [data-element="header"],
+.view-login #fd.es #registrationForm .text-note {
+  display: none;
+}
+.view-login #fd.es #registrationForm .data {
+  width: 100%;
+  padding: 0;
+}
+.view-login #fd.es #registrationForm .form-group {
+  margin: 0;
+}
+.view-login #fd.es #registrationForm .form-control {
+  border-radius: 0;
+  height: 44px;
+}
+.view-login #fd.es #registrationForm [data-registration-fields-item] {
+  padding: 0;
+  padding-top: 0 !important;
+}
+.view-login #fd.es #registrationForm .btn-black {
+  color: #ffffff;
+  background-color: #232323;
+  border-color: #232323;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.view-login #fd.es #registrationForm .btn-black:hover,
+.view-login #fd.es #registrationForm .btn-black:focus,
+.view-login #fd.es #registrationForm .btn-black.focus,
+.view-login #fd.es #registrationForm .btn-black:active,
+.view-login #fd.es #registrationForm .btn-black.active,
+.open > .dropdown-toggle.view-login #fd.es #registrationForm .btn-black {
+  color: #ffffff;
+  background-color: #0a0a0a;
+  border-color: #040404;
+}
+.view-login #fd.es #registrationForm .btn-black:active,
+.view-login #fd.es #registrationForm .btn-black.active,
+.open > .dropdown-toggle.view-login #fd.es #registrationForm .btn-black {
+  background-image: none;
+}
+.view-login #fd.es #registrationForm .btn-black.disabled,
+.view-login #fd.es #registrationForm .btn-black[disabled],
+fieldset[disabled] .view-login #fd.es #registrationForm .btn-black,
+.view-login #fd.es #registrationForm .btn-black.disabled:hover,
+.view-login #fd.es #registrationForm .btn-black[disabled]:hover,
+fieldset[disabled] .view-login #fd.es #registrationForm .btn-black:hover,
+.view-login #fd.es #registrationForm .btn-black.disabled:focus,
+.view-login #fd.es #registrationForm .btn-black[disabled]:focus,
+fieldset[disabled] .view-login #fd.es #registrationForm .btn-black:focus,
+.view-login #fd.es #registrationForm .btn-black.disabled.focus,
+.view-login #fd.es #registrationForm .btn-black[disabled].focus,
+fieldset[disabled] .view-login #fd.es #registrationForm .btn-black.focus,
+.view-login #fd.es #registrationForm .btn-black.disabled:active,
+.view-login #fd.es #registrationForm .btn-black[disabled]:active,
+fieldset[disabled] .view-login #fd.es #registrationForm .btn-black:active,
+.view-login #fd.es #registrationForm .btn-black.disabled.active,
+.view-login #fd.es #registrationForm .btn-black[disabled].active,
+fieldset[disabled] .view-login #fd.es #registrationForm .btn-black.active {
+  background-color: #232323;
+  border-color: #232323;
+}
+.view-login #fd.es #registrationForm .btn-black .badge {
+  color: #232323;
+  background-color: #ffffff;
+}
+.view-login #fd.es.layout-completed {
+  background: white;
+  color: #57595c;
+  padding: 20px;
+}
+.view-login #fd.es.layout-completed input[type="text"] {
+  color: white;
+}
