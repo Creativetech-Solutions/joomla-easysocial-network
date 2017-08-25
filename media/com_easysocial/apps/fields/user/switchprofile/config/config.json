@@ -1,0 +1,12 @@
+{
+	"title": {
+		"default": "Switch Profile"
+	},
+
+	"description": {
+		"default": "Switch your profile type from this drop down."
+	},
+
+	"default": false,
+	"visible_display": true
+}
