@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<social type="fields" group="user">
+	<name>Switch Profile</name>
+	<element>switchprofile</element>
+	<author>Dowalo</author>
+	<url>http://dowalo.com</url>
+	<created>26/04/2017</created>
+	<version>1.0.0</version>
+	<copyright>Copyright (c) 2017 - 2020 Dowalo.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description><![CDATA[PLG_FIELDS_SWITCH_PROFILE_INFO]]></description>
+	<core>false</core>
+	<unique>false</unique>
+	<files>
+		<folder>config</folder>
+		<folder>themes</folder>
+		<file>switchprofile.php</file>
+		<file>switchprofile.xml</file>
+		<file>helper.php</file>
+	</files>
+	<languages>
+		<language type="en-GB">en-GB.plg_fields_user_switch_profiles.ini</language>
+	</languages>
+</social>

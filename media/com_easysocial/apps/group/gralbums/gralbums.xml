@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<social type="apps" group="group">
+	<name>Group Albums</name>
+	<element>gralbums</element>
+	<author>Dowalo</author>
+	<url>http://dowalo.com</url>
+	<created>04/04/2017</created>
+	<version>1.0.0</version>
+	<copyright>Copyright (C) 2017 - 2018 Dowalo Inc</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<installable>true</installable>
+	<core>false</core>
+	<views>
+		<view type="embed">groups</view>
+	</views>
+	<description><![CDATA[APP_GRALBUMS_APP_DESCRIPTION]]></description>
+	<widget>true</widget>
+	<files>
+		<folder>assets</folder>
+		<folder>config</folder>
+		<folder>themes</folder>
+		<folder>views</folder>
+		<folder>widgets</folder>
+		<file>index.html</file>
+		<file>gralbums.php</file>
+		<file>gralbums.xml</file>
+	</files>
+</social>

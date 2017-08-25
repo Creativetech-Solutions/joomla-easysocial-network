@@ -1,0 +1,7 @@
+[
+    {
+        "element" : "projects",
+        "rule" : "team.invited",
+        "group"		: "user"
+    }
+]

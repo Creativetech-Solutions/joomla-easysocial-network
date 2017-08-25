@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<social type="apps" group="user">
+	<name>Projects</name>
+	<element>projects</element>
+	<author>Dowalo</author>
+	<url>http://dowalo.com</url>
+	<created>28/04/2017</created>
+	<version>1.0.0</version>
+	<copyright>Copyright (C) 2017 - 2020 Dowalo</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<installable>true</installable>
+	<core>false</core>
+	<widget>false</widget>
+	<system>false</system>
+	<views>
+		<view type="canvas">dashboard</view>
+		<view type="canvas">profile</view>
+	</views>
+	<description><![CDATA[APP_PROJECTS_APP_DESCRIPTION]]></description>
+	<files>
+		<folder>assets</folder>
+		<folder>config</folder>
+		<folder>controllers</folder>
+		<folder>hooks</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>themes</folder>
+		<folder>views</folder>
+		<file>index.html</file>
+		<file>install.php</file>
+		<sql>install.sql</sql>
+		<file>projects.php</file>
+		<file>projects.xml</file>
+	</files>
+</social>
