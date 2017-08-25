@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3.0" type="file" method="upgrade">
+    <name>file_ats</name>
+    <author>Nicholas K. Dionysopoulos</author>
+    <authorEmail>nicholas@akeebabackup.com</authorEmail>
+    <authorUrl>https://www.akeebabackup.com</authorUrl>
+    <copyright>Copyright (c)2011-2016 Nicholas K. Dionysopoulos</copyright>
+    <license>GNU GPL v3 or later</license>
+    <version>2.2.2</version>
+    <creationDate>2016-07-28</creationDate>
+    <description>Akeeba Ticket System CLI scripts v.2.2.2</description>
+
+    <fileset>
+        <files target="cli">
+            <file>ats-auto-reply.php</file>
+            <file>ats-autoclose-tickets.php</file>
+            <file>ats-mail-fetch.php</file>
+            <file>ats-remove-attachments.php</file>
+            <file>ats-upgrade.php</file>
+        </files>
+    </fileset>
+</extension>

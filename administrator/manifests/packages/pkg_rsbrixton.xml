@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" method="upgrade" version="3.4">
+	<name>RSBrixton!</name>
+	<version>1.0.13</version>
+	<creationDate>January 2015</creationDate>
+	<author>RSJoomla!</author>
+	<authorEmail>supporttickets@rsjoomla.com</authorEmail>
+	<copyright>copyright (C) 2015 RSJoomla.com - All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+	<packagename>rsbrixton</packagename>
+	<files folder="packages">
+		<file type="plugin" id="rsbrixton" group="editors-xtd">plg_editors-xtd_rstemplate_shortcode</file>
+		<file type="plugin" id="rsbrixton" group="system">plg_system_rstemplate</file>
+		<file type="plugin" id="rsbrixton" group="installer">plg_installer</file>
+		<file type="template" id="rsbrixton" client="site">rsbrixton</file>
+	</files>
+	<scriptfile>script.pkg_rsbrixton.php</scriptfile>
+</extension>
